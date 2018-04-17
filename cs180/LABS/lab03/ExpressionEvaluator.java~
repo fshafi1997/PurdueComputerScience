@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class ExpressionEvaluator {
+    public static void main (String[] args) {
+	Scanner test = new Scanner(System.in);
+
+	String example = test.next();
+	//String example = "(-10+sqrt(25*4-4*3*2))/(2*7)"
+	expression = test.next();
+	int plus = example.indexOf("+");
+	int n1 = Integer.parseInt(example.substring(2,plus));
+	String secondbracket = example.substring(9);
+	int firststar = secondbracket.indexOf("*");
+	//n2 = test.next();
+	int n2 = Integer.parseInt(secondbracket.substring(1,firststar));
+	String thirdstep = secondbracket.substring(4);
+	int minus = thirdstep.indexOf("-");
+	//n3 = test.next();
+	int n3 = Integer.parseInt(thirdstep.substring(0,minus));
+	String fourthstep = thirdstep.substring(2);
+	int secondstar = fourthstep.indexOf("*");
+	int n4 = Integer.parseInt(fourthstep.substring(0,secondstar));
+	String fifthstep = fourthstep.substring(2);
+	int thirdstar = fifthstep.indexOf("*");
+	//n5 = test.next();
+	int n5 = Integer.parseInt(fifthstep.substring(0,thirdstar));
+	String sixthstep = fifthstep.substring(2);
+	int thirdbracket = sixthstep.indexOf(")");
+	//n6 = test.next();
+	int n6 = Integer.parseInt(sixthstep.substring(0,thirdbracket));
+	String seventhstep = sixthstep.substring(7);
+	int lastbracket = seventhstep.indexOf(")");
+	//n7 = test.next();
+	int n7 = Integer.parseInt(seventhstep.substring(0,lastbracket));
+
+	double answer = (-n1+Math.sqrt(n2*n3-4*n5*n6))/(2*n7);
+	
+	System.out.println(n1);
+	System.out.println(n2);
+	System.out.println(n3);
+	System.out.println(n4);
+	System.out.println(n5);
+	System.out.println(n6);
+	System.out.println(n7);
+	System.out.println(answer);
+    }
+}
