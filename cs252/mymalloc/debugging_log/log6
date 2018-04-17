@@ -1,0 +1,278 @@
+Sun Jan 28 16:29:50 EST 2018
++b allocate_object 
+Breakpoint 1 at 0x400d15: file ../myMalloc.c, line 225.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_coalesce_chunk_coalesce 
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=824) at ../myMalloc.c:225
++p tsgs_print(print_object)
+No symbol "tsgs_print" in current context.
++p tags_print(print_object)
+$1 = void
++p tags_print(print_object)
+$2 = void
++d
++b deallocate_object 
+Breakpoint 2 at 0x40120d: file ../myMalloc.c, line 378.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_coalesce_chunk_coalesce 
+
+Breakpoint 2, deallocate_object (p=0x6073d8) at ../myMalloc.c:378
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+my_free (p=0x6073d8) at ../myMalloc.c:698
++p tags_print(print_object)
+$3 = void
++n
++b allocate_object 
+Breakpoint 3 at 0x400d15: file ../myMalloc.c, line 225.
++c
+Continuing.
+
+Breakpoint 3, allocate_object (raw_size=824) at ../myMalloc.c:225
++p tags_print(print_object)
+$4 = void
++b 358
+Breakpoint 4 at 0x4011de: file ../myMalloc.c, line 358.
++c
+Continuing.
+
+Breakpoint 4, allocate_object (raw_size=824) at ../myMalloc.c:358
++p tags_print(print_object)
+$5 = void
++p tags_print(print_object)
+$6 = void
++delete
++b 345
+Breakpoint 5 at 0x401164: file ../myMalloc.c, line 345.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_coalesce_chunk_coalesce 
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400bd9 in insert_fenceposts (raw_mem=0x3934c00, size=1024) at ../myMalloc.c:161
++where
+#0  0x0000000000400bd9 in insert_fenceposts (raw_mem=0x3934c00, size=1024) at ../myMalloc.c:161
+#1  0x0000000000400c45 in allocate_chunk (size=1024) at ../myMalloc.c:180
+#2  0x0000000000401062 in allocate_object (raw_size=824) at ../myMalloc.c:324
+#3  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#4  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#5  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#6  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#7  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#8  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#9  0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#10 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#11 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#12 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#13 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#14 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#15 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#16 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#17 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#18 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+186	in /home/u89/fshafi/cs252/lab1-src/myMalloc.c
+#19 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#20 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#21 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#22 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#23 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#24 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#25 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#26 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#27 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#28 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#29 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#30 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#31 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#32 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#33 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#34 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#35 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#36 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#37 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+#38 0x00000000004011ed in allocate_object (raw_size=824) at ../myMalloc.c:358
+Quit
++b 331
+Breakpoint 6 at 0x4010a1: file ../myMalloc.c, line 331.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_coalesce_chunk_coalesce 
+
+Breakpoint 6, allocate_object (raw_size=824) at ../myMalloc.c:331
++p tags_print(print_object)
+$7 = void
++p tags_print(print_object)
+$8 = void
++n
++n
++p tags_print(print_object)
+$9 = void
++b 518
+Breakpoint 7 at 0x40166f: file ../myMalloc.c, line 518.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_coalesce_chunk_coalesce 
+
+Breakpoint 7, deallocate_object (p=0x6073d8) at ../myMalloc.c:518
++p tags_print(print_object)
+$10 = void
++s
++p tags_print(print_object)
+$11 = void
++p tags_print(print_object)
+$12 = void
++p freelist_print(print_object)
+$13 = void
++p basic_print
+$14 = {void (header *)} 0x401f96 <basic_print>
++p finalize_test 
+$15 = {void ()} 0x401c4b <finalize_test>
++p finalize_test()
+$16 = void
++p finalize_test()
+$17 = void
++p finalize_test()
+$18 = void
++c
+Continuing.
+
+Breakpoint 6, allocate_object (raw_size=824) at ../myMalloc.c:331
++p finalize_test()
+$19 = void
++s
+get_left_header (h=0x6073e8) at ../myMalloc.c:120
++s
+get_header_from_offset (ptr=0x6073e8, off=-40) at ../myMalloc.c:98
++s
++s
+get_left_header (h=0x6073e8) at ../myMalloc.c:121
++n
+allocate_object (raw_size=824) at ../myMalloc.c:332
++n
++p forChecking->size 
+$20 = 40
++n
++n
++n
++n
++p finalize_test()
+$21 = void
++q

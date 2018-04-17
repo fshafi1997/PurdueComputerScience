@@ -1,0 +1,19 @@
+Sun Jan 21 16:09:41 EST 2018
++start
+Temporary breakpoint 1 at 0x400a5a: file ./testsrc/test_insert_chunk.c, line 7.
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_insert_chunk 
+
+Temporary breakpoint 1, main () at ./testsrc/test_insert_chunk.c:7
++b myMalloc.c:250
+Breakpoint 2 at 0x400d41: file ../myMalloc.c, line 250.
++r
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_insert_chunk 
+
+Breakpoint 2, allocate_object (raw_size=904) at ../myMalloc.c:254
++p ALLOC_HEADER_SIZE
+No symbol "ALLOC_HEADER_SIZE" in current context.
++p sizeof(header)
+$1 = 40
++p (sizeof(header) - (2 * sizeof(header *)))
+$2 = 24
++q

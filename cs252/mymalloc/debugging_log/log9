@@ -1,0 +1,58 @@
+Sun Jan 28 18:53:26 EST 2018
++b deallocate_object
+Breakpoint 1 at 0x8048e80: file ../myMalloc.c, line 406.
++r
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_m32 
+
+Breakpoint 1, deallocate_object (p=0x804e310) at ../myMalloc.c:406
++n
++n
++n
++n
++n
++n
++s
++p listToUse 
+$1 = 0
++p current->size 
+$2 = 24
++b 427
+Breakpoint 2 at 0x8048ee8: file ../myMalloc.c, line 427.
++r
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_m32 
+
+Breakpoint 1, deallocate_object (p=0x804e310) at ../myMalloc.c:406
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x804e310) at ../myMalloc.c:427
++p current->size=40
+$3 = 40
++s
++s
++s
++p listToUse 
+$4 = 2
++p ALLOC_HEADER_SIZE
+No symbol "ALLOC_HEADER_SIZE" in current context.
++p sizeof(header)
+$5 = 20
++p sizeof(*header)
+A syntax error in expression, near `)'.
++p sizeof(header) - (2 * sizeof(header *))
+$6 = 12
++p sizeof(header *)
+$7 = 4
++sizeof(int)
+Undefined command: "sizeof".  Try "help".
++p sizeof(int)
+$8 = 4
++p sizeof(int)
+$9 = 4
++p sizeof(int *)
+$10 = 4
++p sizeof(char *)
+$11 = 4
++p sizeof(double)
+$12 = 8
++q

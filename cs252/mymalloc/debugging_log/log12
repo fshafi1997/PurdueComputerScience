@@ -1,0 +1,38 @@
+Mon Jan 29 17:49:35 EST 2018
++b deallocate_object 
+Breakpoint 1 at 0x401359: file ../myMalloc.c, line 406.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_large 
+
+Breakpoint 1, deallocate_object (p=0x806048d8) at ../myMalloc.c:406
++b 546
+Breakpoint 2 at 0x40177b: file ../myMalloc.c, line 546.
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x806048d8) at ../myMalloc.c:546
++c
+Continuing.
+
+Breakpoint 1, deallocate_object (p=0x805ffa88) at ../myMalloc.c:406
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x805ffa88) at ../myMalloc.c:546
++p freeList 
+$1 = (header *) 0x604a90 <freelistSentinels+2320>
++p newList2use
+No symbol "newList2use" in current context.
++p listToUse 
+$2 = 58
++c
+Continuing.
+
+Breakpoint 1, deallocate_object (p=0x805fac38) at ../myMalloc.c:406
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x805fac38) at ../myMalloc.c:546
++p listToUse 
+$3 = 58
++q

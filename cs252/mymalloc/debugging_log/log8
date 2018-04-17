@@ -1,0 +1,82 @@
+Sun Jan 28 18:42:05 EST 2018
++b allocate_object 
+Breakpoint 1 at 0x80489e9: file ../myMalloc.c, line 225.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_m32 
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++p finalize_test()
+$1 = void
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++p finalize_test()
+$2 = void
++p tags_print(print_object)
+$3 = void
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_m32 
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++p finalize_test()
+$4 = void
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++p finalize_test()
+$5 = void
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_m32 
+
+Breakpoint 1, allocate_object (raw_size=8) at ../myMalloc.c:225
++p finalize_test()
+$6 = void
++p raw_size
+$7 = 8
++n
++n
++n
++n
++n
++n
++p listToUse 
+$8 = 2
++n
++b 256
+Breakpoint 2 at 0x8048a7e: file ../myMalloc.c, line 256.
++c
+Continuing.
+
+Breakpoint 2, allocate_object (raw_size=8) at ../myMalloc.c:256
++p listToUse 
+$9 = 58
++n
++p current->size 
+$10 = 0
++q

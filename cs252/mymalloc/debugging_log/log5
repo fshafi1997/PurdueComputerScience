@@ -1,0 +1,51 @@
+Thu Jan 25 17:34:16 EST 2018
++start
+Temporary breakpoint 1 at 0x400a9e: file ./testsrc/test_double_free.c, line 4.
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_double_free 
+
+Temporary breakpoint 1, main () at ./testsrc/test_double_free.c:4
+4	  initialize_test(__FILE__);
++b deallocate_object
+Breakpoint 2 at 0x40112c: file ../myMalloc.c, line 367.
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x6073d8) at ../myMalloc.c:367
+warning: Source file is more recent than executable.
+367	    if (p == NULL)
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x6073d8) at ../myMalloc.c:367
+367	    if (p == NULL)
++n
+372	    header * current = ptr_to_header(p);
++n
+374	    header * left = get_left_header(current);
++n
+376	    header * right = get_right_header(current);
++n
+379	    if (current->allocated != ALLOCATED)
++n
+394	   }
++p current->allocated
+$1 = ALLOCATED
++start
+Temporary breakpoint 3 at 0x400a9e: file ./testsrc/test_double_free.c, line 4.
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_double_free 
+
+Temporary breakpoint 3, main () at ./testsrc/test_double_free.c:4
+4	  initialize_test(__FILE__);
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x6073d8) at ../myMalloc.c:367
+367	    if (p == NULL)
++c
+Continuing.
+
+Breakpoint 2, deallocate_object (p=0x6073d8) at ../myMalloc.c:367
+367	    if (p == NULL)
++p tags_print(print_object)
+$2 = void
++q

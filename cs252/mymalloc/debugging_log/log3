@@ -1,0 +1,36 @@
+Sun Jan 21 15:57:04 EST 2018
++r
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_insert_chunk 
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400d88 in allocate_object (raw_size=904) at ../myMalloc.c:263
++where
+#0  0x0000000000400d88 in allocate_object (raw_size=904) at ../myMalloc.c:263
+#1  0x000000000040146b in my_malloc (size=904) at ../myMalloc.c:521
+#2  0x0000000000401645 in malloc_and_clear (size=904) at ../testing.c:48
+#3  0x00000000004016dc in mallocing_loop (array=0x7fffffffe3d0, size=904, n=1, pf=0x401c73 <print_status>, silent=false) at ../testing.c:76
+#4  0x0000000000401788 in mallocing (size=904, pf=0x401c73 <print_status>, silent=false) at ../testing.c:100
+#5  0x0000000000400aa5 in main () at ./testsrc/test_insert_chunk.c:12
++b 263
+Breakpoint 1 at 0x400d84: file ../myMalloc.c, line 263.
++r
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_insert_chunk 
+
+Breakpoint 1, allocate_object (raw_size=904) at ../myMalloc.c:263
++c
+Continuing.
+
+Breakpoint 1, allocate_object (raw_size=904) at ../myMalloc.c:263
++p current->size 
+Cannot access memory at address 0x0
++p freelist->
+No symbol "freelist" in current context.
++p freelist
+No symbol "freelist" in current context.
++p freeList 
+$1 = (header *) 0x603ab8
++p freeList->next
+$2 = (struct header *) 0x0
++p listToUse 
+$3 = 59
++q

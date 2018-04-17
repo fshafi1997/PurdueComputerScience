@@ -1,0 +1,136 @@
+Sun Jan 28 17:27:51 EST 2018
++start
+Temporary breakpoint 1 at 0x400a61: file ./testsrc/test_large.c, line 8.
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_large 
+
+Temporary breakpoint 1, main () at ./testsrc/test_large.c:8
++s
++n
++n
++n
++n
++n
++p _FILE_
+No symbol "_FILE_" in current context.
++p __FILE__
+No symbol "__FILE__" in current context.
++start
+Temporary breakpoint 2 at 0x400a61: file ./testsrc/test_large.c, line 8.
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_large 
+
+Temporary breakpoint 2, main () at ./testsrc/test_large.c:8
++s
++s
+initialize_test (name=0x4026b4 "./testsrc/test_large.c") at ../testing.c:15
++s
+strrchr () at ../sysdeps/x86_64/strrchr.S:24
++s
++s
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+strrchr () at ../sysdeps/x86_64/strrchr.S:87
++n
+initialize_test (name=0x4026b4 "./testsrc/test_large.c") at ../testing.c:16
++n
++n
++n
++n
++n
++n
++n
+main () at ./testsrc/test_large.c:11
++p finalize_test 
+$1 = {void ()} 0x401d94 <finalize_test>
++p finalize_test()
+$2 = void
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 12
+Breakpoint 3 at 0x400a8e: file ./testsrc/test_large.c, line 12.
++c
+Continuing.
+
+Breakpoint 3, main () at ./testsrc/test_large.c:13
++p finalize_test 
+$3 = {void ()} 0x401d94 <finalize_test>
++p finalize_test()
+$4 = void
++q

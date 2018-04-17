@@ -1,0 +1,10 @@
+Mon Jan 29 17:37:36 EST 2018
++b 546
+No line 546 in the current file.
+Breakpoint 1 (546) pending.
++run
+Starting program: /home/u89/fshafi/cs252/lab1-src/tests/test_large 
+
+Program received signal SIGINT, Interrupt.
+0x0000000000401837 in detect_cycles () at ../myMalloc.c:568
++q
