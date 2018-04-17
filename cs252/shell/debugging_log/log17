@@ -1,0 +1,43 @@
+Mon Feb 26 15:13:30 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fc5: file command.cc, line 249.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:249
++set follow-fork-mode child
++b 390
+Breakpoint 2 at 0x408596: file command.cc, line 390.
++n
++n
++n
++c
+Continuing.
+[New process 13991]
+[Switching to process 13991]
+
+Thread 2.1 "shell" hit Breakpoint 2, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:390
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+process 13991 is executing new program: /bin/ls
+Error in re-setting breakpoint 1: Function "Command::execute()" not defined.
+Error in re-setting breakpoint 2: No source file named /home/u89/fshafi/cs252/lab3-src/command.cc.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 2 (process 13991) exited with code 02]
++n
+The program is not being run.
++n
+The program is not being run.
++n
+The program is not being run.
++q

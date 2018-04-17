@@ -1,0 +1,33 @@
+Sun Feb 18 01:11:23 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x406627: file command.cc, line 215.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x60f480 <Shell::_currentCommand>) at command.cc:215
++n
++s
+Command::expanding (this=0x60f480 <Shell::_currentCommand>) at command.cc:108
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p finaL
+$1 = 0x628580 "$"
++n
++q

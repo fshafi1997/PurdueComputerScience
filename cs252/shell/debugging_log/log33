@@ -1,0 +1,48 @@
+Fri Mar 2 15:37:52 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x40804d: file command.cc, line 242.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++c
+Continuing.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++exit
+Undefined command: "exit".  Try "help".
++run 
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++c
+Continuing.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++n
++p _simpleCommands.at(x)->_arguments.at(y)->c_str()
+$1 = 0x6295b0 "echo"
++p _simpleCommands.at(x)->_arguments.at(y+1)->c_str()
+Python Exception <class 'IndexError'> Vector index "1" should not be >= 1.: 
+Error while executing Python code.
++q

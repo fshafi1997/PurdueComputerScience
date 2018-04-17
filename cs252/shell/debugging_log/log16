@@ -1,0 +1,56 @@
+Mon Feb 26 15:08:00 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fc5: file command.cc, line 249.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:249
++set follow-fork-mode child
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+[New process 23242]
+[Switching to process 23242]
+Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:390
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+process 23242 is executing new program: /bin/ls
+Error in re-setting breakpoint 1: Function "Command::execute()" not defined.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 2 (process 23242) exited with code 02]
++q

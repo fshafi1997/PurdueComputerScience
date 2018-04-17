@@ -1,0 +1,12 @@
+Mon Mar 5 13:38:24 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x408373: file command.cc, line 242.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x6125c0 <Shell::_currentCommand>) at command.cc:242
++n
++call print()
++exit
+Undefined command: "exit".  Try "help".
++q

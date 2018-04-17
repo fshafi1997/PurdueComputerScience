@@ -1,0 +1,64 @@
+Wed Feb 28 17:28:22 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fef: file command.cc, line 242.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:248
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+yyparse () at y.tab.cc:1297
++q

@@ -1,0 +1,58 @@
+total 1288
+drwxr-s--- 5 fshafi fshafi   4096 Feb  9 23:16 .
+drwxr-s--- 7 fshafi fshafi   4096 Feb  7 22:25 ..
+-rw-r----- 1 fshafi fshafi   4779 Feb  9 23:14 command.cc
+-rw-r----- 1 fshafi fshafi    497 Feb  9 16:25 command.hh
+-rw-r----- 1 fshafi fshafi 223312 Feb  9 23:14 command.o
+drwxr-s--- 2 fshafi fshafi   4096 Feb  9 17:13 examples
+drwxr-s--- 8 fshafi fshafi   4096 Feb  9 23:15 .git
+-rw-r----- 1 fshafi fshafi    299 Feb  7 22:23 .gitignore
+-rw-r----- 1 fshafi fshafi  47216 Feb  9 22:27 lex.yy.cc
+-rw-r----- 1 fshafi fshafi 106912 Feb  9 22:27 lex.yy.o
+-rw-r----- 1 fshafi fshafi  68855 Feb  9 23:15 .local.git.out
+-rw-r----- 1 fshafi fshafi   1569 Feb  7 22:23 Makefile
+-rw------- 1 fshafi fshafi      0 Feb  9 23:16 myOut.txt
+-rw------- 1 fshafi fshafi      0 Feb  9 20:55 out
+-rw-r----- 1 fshafi fshafi      0 Feb  9 20:55 outfile
+-rw-r----- 1 fshafi fshafi   3161 Feb  7 22:23 read-line.c
+-rwxr-x--- 1 fshafi fshafi 314456 Feb  9 23:14 shell
+-rw-r----- 1 fshafi fshafi    206 Feb  9 17:47 shell.cc
+-rw-r----- 1 fshafi fshafi    144 Feb  9 17:46 shell.hh
+-rw-r----- 1 fshafi fshafi    641 Feb  7 22:40 shell.l
+-rw-r----- 1 fshafi fshafi 126344 Feb  9 22:27 shell.o
+-rw-r----- 1 fshafi fshafi   3188 Feb  9 20:45 shell.y
+-rw-r----- 1 fshafi fshafi    678 Feb  9 22:37 simpleCommand.cc
+-rw-r----- 1 fshafi fshafi    318 Feb  7 22:23 simpleCommand.hh
+-rw-r----- 1 fshafi fshafi 193904 Feb  9 22:37 simpleCommand.o
+-rw-r----- 1 fshafi fshafi     37 Feb  7 22:27 testall.out
+drwxr-s--- 3 fshafi fshafi   4096 Feb  9 17:45 test-shell
+-rw-r----- 1 fshafi fshafi    495 Feb  7 22:23 tty-raw-mode.c
+-rw-r----- 1 fshafi fshafi  48952 Feb  9 22:27 y.tab.cc
+-rw-r----- 1 fshafi fshafi   2892 Feb  9 22:27 y.tab.hh
+-rw-r----- 1 fshafi fshafi  89000 Feb  9 22:27 y.tab.o
+command.cc
+command.hh
+command.o
+examples
+lex.yy.cc
+lex.yy.o
+Makefile
+myOut.txt
+out
+outfile
+read-line.c
+shell
+shell.cc
+shell.hh
+shell.l
+shell.o
+shell.y
+simpleCommand.cc
+simpleCommand.hh
+simpleCommand.o
+testall.out
+test-shell
+tty-raw-mode.c
+y.tab.cc
+y.tab.hh
+y.tab.o

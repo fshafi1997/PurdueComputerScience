@@ -1,0 +1,12 @@
+Sat Feb 17 15:00:46 EST 2018
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff756c260 in __read_nocancel () at ../sysdeps/unix/syscall-template.S:84
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff74aa428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
++q

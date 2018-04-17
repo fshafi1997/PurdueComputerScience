@@ -1,0 +1,70 @@
+Mon Feb 26 14:57:59 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fc5: file command.cc, line 249.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:249
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+yyparse () at y.tab.cc:1288
++n
++n
++n
++n
++n
++q

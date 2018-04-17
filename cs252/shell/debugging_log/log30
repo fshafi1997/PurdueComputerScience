@@ -1,0 +1,50 @@
+Fri Mar 2 09:53:49 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407dd7: file command.cc, line 242.
++run
+Starting program: /u/data/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x611560 <Shell::_currentCommand>) at command.cc:242
++n
++s
+Command::expanding (this=0x611560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++p _simpleCommands.at(x)->_arguments.at(0)->c_str()
+$1 = 0x6284f0 "echo"
++p _simpleCommands.at(x)->_arguments.at(0)->c_str()
+$2 = 0x6284f0 "echo"
++p _simpleCommands.at(x)->_arguments.at(1)->c_str()
+$3 = 0x628560 "${?}"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++q

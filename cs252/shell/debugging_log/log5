@@ -1,0 +1,14 @@
+Sat Feb 17 15:15:33 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x405a93: file command.cc, line 157.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Command::execute (this=0x60f440 <Shell::_currentCommand>) at command.cc:157
++n
++n
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff74aa428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
++q

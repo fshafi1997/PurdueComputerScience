@@ -1,0 +1,53 @@
+Sat Mar 3 13:44:55 EST 2018
++b shell.y:101
+Breakpoint 1 at 0x4059b8: file shell.y, line 101.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, yyparse () at shell.y:104
++s
+replaceWord (s=0x629560 "${?}", oldW=0x40c491 "{?}", newW=0x40c48d "{@}") at shell.y:202
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p s
+$1 = 0x6295a0 "${@}"
++p result
+$2 = 0x629580 "${@}"
++p oldW
+$3 = 0x40c491 "{?}"
++n
+yyparse () at shell.y:105
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++qq
+Undefined command: "qq".  Try "help".
++q

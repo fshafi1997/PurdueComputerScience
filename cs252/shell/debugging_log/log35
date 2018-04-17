@@ -1,0 +1,30 @@
+Sat Mar 3 13:02:23 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x4080e7: file command.cc, line 242.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++c
+Continuing.
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++p _simpleCommands.at(x)->_arguments.size()
+$1 = 1
++p _simpleCommands.at(x)->_arguments.at(0)->c_str()
+$2 = 0x6295b0 "echo"
++p _simpleCommands.at(x)->_arguments.at(1)->c_str()
+Python Exception <class 'IndexError'> Vector index "1" should not be >= 1.: 
+Error while executing Python code.
++q

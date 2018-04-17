@@ -1,0 +1,78 @@
+Wed Feb 28 17:56:32 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fef: file command.cc, line 243.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:243
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p argument 
+$1 = 0x629560 "${$}"
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:243
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++n
++p argument 
+$2 = 0x6294f0 "echo"
++n
++n
++n
++n
++n
++n
++n
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:243
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++p _simpleCommands.at(x)->_arguments.at(y)->c_str()
+$3 = 0x6294f0 "echo"
++_simpleCommands.at(x)->_arguments.at(y+1)->c_str()
+Undefined command: "_simpleCommands".  Try "help".
++q
+Not confirmed.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:243
++n
++s
+Command::expanding (this=0x612560 <Shell::_currentCommand>) at command.cc:113
++n
++n
++n
++p _simpleCommands.at(x)->_arguments.at(y)->c_str()
+$4 = 0x6294f0 "echo"
++p _simpleCommands.at(x)->_arguments.at(y+1)->c_str()
+$5 = 0x629560 "${$}"
++q

@@ -1,0 +1,36 @@
+Sun Feb 18 01:06:03 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x4065d3: file command.cc, line 213.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x60f480 <Shell::_currentCommand>) at command.cc:213
++n
++s
+Command::expanding (this=0x60f480 <Shell::_currentCommand>) at command.cc:108
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p finaL
+$1 = 0x628580 "$"
++n
+
+Program received signal SIGSEGV, Segmentation fault.
+__strcat_sse2_unaligned () at ../sysdeps/x86_64/multiarch/strcpy-sse2-unaligned.S:296
++q

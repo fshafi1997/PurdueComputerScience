@@ -1,0 +1,72 @@
+Wed Feb 28 18:07:19 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fd9: file command.cc, line 242.
++run
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x612560 <Shell::_currentCommand>) at command.cc:242
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p es
+$1 = 32767
++n
++p status
+$2 = 0
++n
++p stat
+No symbol "stat" in current context.
++p status 
+$3 = 0
++p returnCode 
+$4 = 0
++p returnCode
+$5 = 0
++n
++n
++n
++n
+yyparse () at y.tab.cc:1288
++n
++n
++n
++n
++n
++q

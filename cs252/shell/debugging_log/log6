@@ -1,0 +1,110 @@
+Sat Feb 17 15:59:42 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x406487: file command.cc, line 206.
++run 
+Starting program: /home/u89/fshafi/cs252/lab3-src/shell 
+
+Breakpoint 1, Command::execute (this=0x60f460 <Shell::_currentCommand>) at command.cc:206
++s
++s
+Command::expanding (this=0x60f460 <Shell::_currentCommand>) at command.cc:108
++s
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::size (this=0x60f460 <Shell::_currentCommand>) at /usr/include/c++/5/bits/stl_vector.h:655
++s
+Command::expanding (this=0x60f460 <Shell::_currentCommand>) at command.cc:110
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::at (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:824
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::_M_range_check (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:802
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::size (this=0x60f460 <Shell::_currentCommand>) at /usr/include/c++/5/bits/stl_vector.h:655
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::_M_range_check (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:807
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::at (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:825
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::operator[] (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:780
++s
+std::vector<SimpleCommand*, std::allocator<SimpleCommand*> >::at (this=0x60f460 <Shell::_currentCommand>, __n=0) at /usr/include/c++/5/bits/stl_vector.h:826
++s
+std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*> >::size (
+    this=0x6264f0) at /usr/include/c++/5/bits/stl_vector.h:655
++s
+Command::expanding (this=0x60f460 <Shell::_currentCommand>) at command.cc:112
++n
++p argument 
+$1 = 0x6264d0 "${HOME}"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p expansion 
+$2 = 0x626550 "/homes/fshafi"
++n
++p newString->c_str()
+$3 = 0x628590 "/homes/fshafi"
++n
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff74aa428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+0	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.

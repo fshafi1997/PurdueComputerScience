@@ -1,0 +1,5 @@
+Fri Mar 2 09:39:30 EST 2018
++b Command::execute() 
+Breakpoint 1 at 0x407fd9: file command.cc, line 242.
++echo ${$}
+${$}+q
