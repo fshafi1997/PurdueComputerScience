@@ -1,0 +1,165 @@
+#!/bin/bash
+nameFile=$1
+
+if [ ! -f $nameFile ]; then
+	echo "Error: $nameFile is not readable!"
+	exit 0
+fi
+
+if [ $# -ne 1 ]; then
+	echo "Usage: histogram <filename>"
+exit 1
+fi
+
+
+
+
+countLines=$(wc -l < "$nameFile")
+
+
+declare -a array2use
+
+
+echo -n $countLines
+echo -n " scores total..."
+echo
+
+(awk '{print $2}' ex02) > file2Use.txt
+
+counter=0
+for line in $(cat file2Use.txt);
+    do
+	array2use[$counter]="$line"
+	let counter=counter+1
+done
+
+#doing the avg
+total=0
+for n in ${array2use[@]}
+do
+      (( total += n ))
+      done
+
+declare -a equal100
+counter2=0
+declare -a greater90
+counter3=0
+declare -a greater80
+counter4=0
+declare -a greater70
+counter5=0
+declare -a greater60
+counter6=0
+declare -a greater50
+counter7=0
+declare -a greater40
+counter8=0
+declare -a greater30
+counter9=0
+declare -a greater20
+counter10=0
+declare -a greater10
+counter11=0
+declare -a less10
+counter12=0
+
+for i in "${array2use[@]}"
+	do
+	    if [ $i -eq 100 ]; then
+		equal100[$counter2]="$i"
+	        let counter2=counter2+1
+	    elif [[ $i -ge 90 && $i -lt 100 ]]; then
+	    	greater90[$counter3]="$i"
+		let counter3=counter3+1
+	    elif [[ $i -ge 80 && $i -lt 90 ]]; then
+	    	greater80[$counter4]="$i"
+		let counter4=counter4+1
+	    elif [[ $i -ge 70 && $i -lt 80 ]]; then
+	    	greater70[$counter5]="$i"
+		let counter5=counter5+1
+	    elif [[ $i -ge 60 && $i -lt 70 ]]; then
+	    	greater60[$counter6]="$i"
+		let counter6=counter6+1
+	    elif [[ $i -ge 50 && $i -lt 60 ]]; then
+	    	greater50[$counter7]="$i"
+		let counter7=counter7+1
+	    elif [[ $i -ge 40 && $i -lt 50 ]]; then
+	    	greater40[$counter8]="$i"
+		let counter8=counter8+1
+	    elif [[ $i -ge 30 && $i -lt 40 ]]; then
+	    	greater30[$counter4]="$i"
+		let counter9=counter9+1
+	    elif [[ $i -ge 20 && $i -lt 30 ]]; then
+	    	greater20[$counter10]="$i"
+		let counter10=counter10+1
+	    elif [[ $i -ge 10 && $i -lt 20 ]]; then
+	    	greater10[$counter11]="$i"
+		let counter11=counter11+1
+	    else 
+		less10[$counter12]="$i"
+		let counter12=counter12+1
+	    fi
+	#echo $i
+done
+
+#echo -n "length is "
+#echo -n ${#less10[@]}
+#echo
+
+
+#echo ( head -c ${#less10[@]} < /dev/zero | tr '\0' '\075')
+echo -n "100: "
+head -c ${#equal100[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 90: "
+head -c ${#greater90[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 80: "
+head -c ${#greater80[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 70: "
+head -c ${#greater70[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 60: "
+head -c ${#greater60[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 50: "
+head -c ${#greater50[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 40: "
+head -c ${#greater40[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 30: "
+head -c ${#greater30[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 20: "
+head -c ${#greater20[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n " 10: "
+head -c ${#greater10[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+echo -n "  0: "
+head -c ${#less10[@]} < /dev/zero | tr '\0' '\075'
+echo -n " "
+echo
+
+
+
+#avg is
+echo -n "Average: "
+echo -n $((total / countLines))
+echo
+
+exit 0
+
+

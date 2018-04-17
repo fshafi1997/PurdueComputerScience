@@ -1,0 +1,44 @@
+#!/bin/bash
+
+fileName=$1
+
+if [ ! -f $fileName ]; then
+	echo "Error: $fileName is not readable!"
+	exit 2
+fi
+
+if [ $# -ne 1 ]; then
+	echo "Usage: verify <filename>"
+exit 1
+fi
+
+#file not readable not woring
+#if [ -r $fileName ]; then
+#	echo "Error: noread is not readable!"
+#exit 0
+#fi
+
+
+NAME=`cut -d ';' -f1 $fileName`
+ADDRESS=`cut -d ';' -f2 $fileName`
+
+nameOut=$(echo "$NAME" | egrep -x '[A-Z][a-z]+, [A-Z][a-z]+( [A-Z]\.)?')
+addressOut=$(echo "$ADDRESS" | egrep -x '^[0-9]+ [0-9A-Z]( *[0-9a-zA-Z.])+$')
+
+lenName=${#nameOut}
+lenAddr=${#addressOut}
+
+if [[ $lenName -eq 0  && $lenAddr -eq 0 ]]; then
+	echo "Invalid name and address!"
+elif [[ $lenName -eq 0 && $lenAddr -ne 0 ]]; then
+	echo "Invalid name!"
+elif [[ $lenName -ne 0 && $lenAddr -eq 0 ]]; then
+	echo "Invalid address!"
+else
+    echo "Data is valid."
+fi
+
+exit 0
+
+
+

@@ -1,0 +1,66 @@
+#/usr/local/bin/bash
+
+# grep -i -c 'bob' house_dir_tab.txt 
+
+if [ $# -ne 0 ]; then
+	echo "Usage: phonebook"
+exit 0
+fi
+
+echo "Welcome to MagicPhone!"
+read -p "Please enter part or all of a name to search for: " name
+count=$(grep -i -c $name house_dir_tab.txt)
+
+if [ $count -eq 0 ]; then
+    echo "Sorry, I could not find that person."
+    exit 0
+fi
+
+
+if [ $count -gt 1 ]; then
+	echo -n "I found "
+	echo -n $count
+	echo -n " matches"
+	echo
+	echo "You might want to be more specific."
+	echo "The first of these matches is:"
+	forSubstr=$(grep -i $name house_dir_tab.txt) 
+	result=$(grep -i $name -m1 house_dir_tab.txt | cut -f1)
+	echo -n "Name: "
+	echo -n $result
+	echo
+	result3=$(grep -i $name -m1 house_dir_tab.txt | cut -f2)
+	echo -n "State: "
+	echo -n $result3
+	echo
+	result5=$(grep -i $name -m1 house_dir_tab.txt | cut -f4)
+	echo -n "Phone: "
+	echo -n $result5
+	echo
+	echo -n "Search complete on "
+	echo -n `date`
+	echo
+	exit 1
+
+else
+    	echo "Match found!"
+	forSubstr=$(grep -i $name house_dir_tab.txt) 
+    	result=$(grep -i $name -m1 house_dir_tab.txt | cut -f1)
+    	echo -n "Name: "
+    	echo -n $result
+    	echo
+    	result3=$(grep -i $name -m1 house_dir_tab.txt | cut -f2)
+    	echo -n "State: "
+    	echo -n $result3
+    	echo
+    	result5=$(grep -i $name -m1 house_dir_tab.txt | cut -f4)
+    	echo -n "Phone: "
+    	echo -n $result5
+    	echo
+    	echo -n "Search complete on "
+    	echo -n `date`
+    	echo
+	exit 0
+fi
+
+

@@ -1,0 +1,63 @@
+#/usr/local/bin/bash
+
+#prime number thing and making and running of binary file left
+
+
+#arr=( "find . -name "*.[ch]"" )
+#Why cant declare arrayand use it??
+#declare -a array=($(ls *[.c]))  
+
+#for i in "${array[@]}"
+#do
+#	echo "$i"
+#done
+
+if [ $# -ne 0 ]; then
+	echo "Usage: compile"
+exit 1
+fi
+
+
+
+#if [ string -n ]; then
+#echo "Failure"
+# else
+#  echo "Success!"
+#   fi
+
+for i in *.c
+do
+	#echo "gcc -Wall -std=c99 ${i%.c}.out"
+	s1="C program: "
+	s2="${i%.c}.c"
+	sC=$s1$s2
+	echo $sC
+	#string=$(gcc -Wall -std=c99 "${i%.c}.c")
+	if gcc -Wall -std=c99 "${i%.c}.c"; then
+	    echo "Successfully compiled!";
+		for j in *.data
+		do
+    			l1="Input file: "
+    			l2="${j%.data}.data"
+    			lc=$l1$l2
+    			echo $lc
+			a.out < ${j%.data}.data
+			if [ $? -ne 0 ]; then
+			      echo "Run failed on $l2."
+			else
+			      echo "Run successful."
+			fi
+		
+		done
+	else 
+	    a="Compilation of "
+	    b="${i%.c}.c"
+	    c=" failed!"
+	    d=$a$b$c
+	    echo $d;
+	fi
+
+	echo
+done
+
+exit 0
