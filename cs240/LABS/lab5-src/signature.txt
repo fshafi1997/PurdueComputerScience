@@ -1,0 +1,7 @@
+File Type		Extension	Signature				Signature Offset
+Excecutable file	exe		4D 5A					0
+WAV file    		wav		52 49 46 46 nn nn nn nn 57 41 56 45	0
+JPEG			jpeg		FF D8 FF DB    	     	      	 	0
+GIF			gif		47 49 46 38 37 61			0
+TAR			tar		75 73 74 61 72 00 30 30			0x101
+ZIP			zip		50 4B 03 04    	     			0
