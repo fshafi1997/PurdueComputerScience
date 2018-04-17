@@ -1,0 +1,13 @@
+Running test5
+Creating Dishwasher with name "Sears Dishwasher Master"
+Adding 15 dishes to the dishwasher...
+Creating Washer with name "Sears Washer Master"
+Adding 20 clothes to the washer...
+Creating Microwave with name "Sears Microwave Master"
+Adding 50 food to the microwave...
+
+Finding the energy used by each appliance...
+Sears Dishwasher Master: powerUsed=545
+Sears Washer Master: powerUsed=400
+Sears Microwave Master: powerUsed=350
+

@@ -1,0 +1,501 @@
+Sun Apr 30 15:23:14 EDT 2017
++start test5
+Temporary breakpoint 1 at 0x401e8a: file mytest.cpp, line 208.
+Starting program: /home/u89/fshafi/cs240/Final-Exam-Practice/problems/problem_3/mytest test5
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe058) at mytest.cpp:208
+208	int main( int argc, char ** argv ) {
++s
+209	    if (argc <2) {
++s
+214	    std::string test = argv[1];;
++s
+216	    if ( test == "test1" ) {
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x40285b "test1")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
+2540	    { return __lhs.compare(__rhs) == 0; }
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:219
+219	    else if ( test == "test2" ) {
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402861 "test2")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
+2540	    { return __lhs.compare(__rhs) == 0; }
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:222
+222	    else if ( test == "test3" ) {
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402867 "test3")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
+2540	    { return __lhs.compare(__rhs) == 0; }
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:225
+225	    else if ( test == "test4" ) {
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x40286d "test4")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
+2540	    { return __lhs.compare(__rhs) == 0; }
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:228
+228	    else if ( test == "test5" ) {
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402873 "test5")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
+2540	    { return __lhs.compare(__rhs) == 0; }
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:229
+229		test5();
++s
+test5 () at mytest.cpp:91
+91	    DLList * list = new DLList();
++s
+DLList::DLList (this=0x605040) at problem_dllist.cpp:9
+warning: Source file is more recent than executable.
+9	    head = new ListNode();
++s
+ListNode::ListNode (this=0x605060) at DLList.h:13
+13		    node_count++;
++s
+14		}
++s
+DLList::DLList (this=0x605040) at problem_dllist.cpp:10
+10	    head->next = head;
++s
+11	    head->prev = head;
++s
+12	}
++s
+test5 () at mytest.cpp:92
+92	    for (int i = 0; i < 20; i++) {
++s
+93		list->insert_last( i*i );
++s
+DLList::insert_last (this=0x605040, value=0) at problem_dllist.cpp:91
+91	    ListNode * e = new ListNode;
++s
+ListNode::ListNode (this=0x605080) at DLList.h:13
+13		    node_count++;
++s
+14		}
++s
+DLList::insert_last (this=0x605040, value=0) at problem_dllist.cpp:92
+92	    e->value = value;
++s
+94	    e->next = head;
++s
+95	    e->prev = head->prev;
++n
+96	    e->prev->next = e;
++n
+97	    head->prev = e;
++n
+98	}
++n
+test5 () at mytest.cpp:92
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++p i
+$1 = 9
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++p i
+$2 = 12
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++p i
+$3 = 15
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++n
+93		list->insert_last( i*i );
++n
+92	    for (int i = 0; i < 20; i++) {
++p i
+$4 = 18
++n
+93		list->insert_last( i*i );
++p i
+$5 = 19
++n
+92	    for (int i = 0; i < 20; i++) {
++p i
+$6 = 19
++s
+95	    list->print_list();
++s
+DLList::print_list (this=0x605040) at problem_dllist.cpp:18
+18	    std::cout << "Printing List..." << std::endl;
++s
+19	    if ( head->next == head ) {
++s
+23		ListNode * e = head->next;  
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+26			std::cout << e->value << ", ";
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+25		    if ( e->next != head )
++n
+28			std::cout << e->value;
++n
+29		    e = e->next;
++n
+24		while ( e != head) {
++n
+31		std::cout << std::endl;
++n
+33	}
++n
+test5 () at mytest.cpp:97
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++n
+98		ListNode * e = list->get_ith(i + i);
++n
+99		if ( e == NULL) {
++n
+103		    printf("get_ith(%d)=%d\n", i+i, e->value);
++n
+97	    for (int i = 0; i < 11; i++) {
++s
+106	    delete list;
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:66
+66	    e = head->next;
++s
+67	    f = e;
++s
+68	    while(f!=head){
++s
+69		e = f;
++s
+70		f = f->next;
++s
+71		delete e;
++s
+ListNode::~ListNode (this=0x605080, __in_chrg=<optimized out>) at DLList.h:16
+16		    node_count--;
++p node_count
+$7 = 21
++s
+17		}
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:68
+68	    while(f!=head){
++s
+69		e = f;
++s
+70		f = f->next;
++s
+71		delete e;
++s
+ListNode::~ListNode (this=0x6050a0, __in_chrg=<optimized out>) at DLList.h:16
+16		    node_count--;
++s
+17		}
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:68
+68	    while(f!=head){
++s
+69		e = f;
++p node
+No symbol "node" in current context.
++p node_count
+No symbol "node_count" in current context.
++q

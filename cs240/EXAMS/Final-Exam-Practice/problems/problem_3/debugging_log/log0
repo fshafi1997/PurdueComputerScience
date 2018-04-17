@@ -1,0 +1,354 @@
+Sat Apr 29 15:41:34 EDT 2017
++start test5
+Temporary breakpoint 1 at 0x401e8a: file mytest.cpp, line 208.
+Starting program: /home/u89/fshafi/cs240/Final-Exam-Practice/problems/problem_3/mytest test5
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe058) at mytest.cpp:208
++s
++s
++s
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x40277b "test1")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:219
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402781 "test2")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:222
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402787 "test3")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:225
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x40278d "test4")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:228
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", 
+    __rhs=0x402793 "test5")
+    at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:229
++s
+test5 () at mytest.cpp:91
++s
+DLList::DLList (this=0x605040) at problem_dllist.cpp:9
++s
+ListNode::ListNode (this=0x605060) at DLList.h:13
++s
++s
+DLList::DLList (this=0x605040) at problem_dllist.cpp:10
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=0) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x605080) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=0) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=1) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x6050a0) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=1) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=4) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x6050c0) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=4) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=9) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x6050e0) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=9) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=16) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x605100) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=16) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++s
+DLList::insert_last (this=0x605040, value=25) at problem_dllist.cpp:87
++s
+ListNode::ListNode (this=0x605120) at DLList.h:13
++s
++s
+DLList::insert_last (this=0x605040, value=25) at problem_dllist.cpp:88
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:92
++s
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p i
+$1 = 17
++n
++n
++n
++n
++n
++p i
+$2 = 19
++n
++s
+DLList::print_list (this=0x605040) at problem_dllist.cpp:18
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:97
++s
++s
+DLList::get_ith (this=0x605040, ith=0) at problem_dllist.cpp:147
++p ith
+$3 = 0
++s
+ListNode::ListNode (this=0x605300) at DLList.h:13
++s
++s
+DLList::get_ith (this=0x605040, ith=0) at problem_dllist.cpp:148
++s
++s
++s
++s
++s
++s
++s
++s
+test5 () at mytest.cpp:99
++s
++s
++s
++p i+i
+$4 = 2
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++s
++s
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:64
++s
+ListNode::ListNode (this=0x605460) at DLList.h:13
++s
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:65
++s
++s
++s
+ListNode::~ListNode (this=0x605080, __in_chrg=<optimized out>) at DLList.h:16
++s
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:68
++s
++s
++s
+ListNode::~ListNode (this=0x6050a0, __in_chrg=<optimized out>) at DLList.h:16
++s
++s
+DLList::~DLList (this=0x605040, __in_chrg=<optimized out>) at problem_dllist.cpp:68
++s
++s
++:q
+Undefined command: "".  Try "help".
++q

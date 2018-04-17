@@ -1,0 +1,18 @@
+s[0] = {firstName = Zidane
+        lastName = Tribal
+        id = 34}
+s[1] = {firstName = Adelbert
+        lastName = Steiner
+        id = 45}
+s[2] = {firstName = Freya
+        lastName = Crescent
+        id = 84}
+s[3] = {firstName = Eiko
+        lastName = Carol
+        id = 73}
+s[4] = {firstName = Armarant
+        lastName = Coral
+        id = 0}
+element found
+result = {firstName = Adelbert, lastName = Steiner, id = 45}
+element not found

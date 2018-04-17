@@ -1,0 +1,38 @@
+Fri Apr 28 21:49:57 EDT 2017
++start test3
+Temporary breakpoint 1 at 0x4006fe: file mytest.c, line 10.
+Starting program: /home/u89/fshafi/cs240/Final-Exam-Practice/problems/problem_2/mytest test3
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe058) at mytest.c:10
++s
++s
++s
++s
++s
++s
++s
++s
++s
+findElement (n=9, elementSize=4, array=0x7fffffffde90, key=42, result=0x7fffffffde70, matches=0x401019 <intMatches>) at problem_pointer_to_function.c:66
++s
++s
++s
++s
+intMatches (key=42, element=0x7fffffffde90) at problem_pointer_to_function.c:19
++s
++s
++s
++s
+findElement (n=9, elementSize=4, array=0x7fffffffde90, key=42, result=0x7fffffffde70, matches=0x401019 <intMatches>) at problem_pointer_to_function.c:67
++s
++s
++s
+intMatches (key=42, element=0x7fffffffde94) at problem_pointer_to_function.c:19
++s
++s
++s
++s
+findElement (n=9, elementSize=4, array=0x7fffffffde90, key=42, result=0x7fffffffde70, matches=0x401019 <intMatches>) at problem_pointer_to_function.c:67
++s
++s
++q

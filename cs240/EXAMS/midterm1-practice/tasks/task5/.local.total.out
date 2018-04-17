@@ -1,0 +1,632 @@
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. ifransig   
+Tue Feb 23 16:21:05 EST 2016
+-------------------------------------------------
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. ifransig Tue Feb 23 16:21:05 EST 2016  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. ifransig   
+Tue Feb 23 16:39:01 EST 2016
+-------------------------------------------------
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. ifransig Tue Feb 23 16:39:01 EST 2016  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:27:00 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:27:00 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:27:44 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:27:44 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:30:35 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:30:35 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:37:46 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:37:46 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:40:44 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:40:44 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:41:12 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:41:12 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:41:45 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:41:45 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:42:30 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:42:30 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. cs240   
+Mon Jan 30 22:42:49 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. cs240 Mon Jan 30 22:42:49 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Sun Feb  5 13:49:09 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Sun Feb 5 13:49:09 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Sun Feb  5 15:18:06 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Sun Feb 5 15:18:06 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Sun Feb  5 17:56:00 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Sun Feb 5 17:56:00 EST 2017  Total:  10 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Mon Feb  6 15:34:26 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 0   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Mon Feb 6 15:34:26 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 16:44:00 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 0   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 16:44:00 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 17:11:37 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 0   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 17:11:37 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 19:52:40 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 19:52:40 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 19:55:53 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 19:55:53 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 19:59:58 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 19:59:58 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:06:57 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:06:57 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:08:04 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 0   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 0   of 5  
+task33 "Hello world" "world"        : 0   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 0   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 0   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:08:04 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:11:59 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+!!!!! Don't use string library functions !!!!!
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:11:59 EST 2017  Total:  0 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:12:49 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 0   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:12:49 EST 2017  Total:  40 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:40:04 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:40:04 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 20:52:08 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 20:52:08 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:00:17 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:00:17 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:10:28 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:10:28 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:21:25 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:21:25 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:30:26 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 0   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:30:26 EST 2017  Total:  45 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:40:25 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 5   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:40:25 EST 2017  Total:  50 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Tue Feb  7 21:41:23 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 5   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Tue Feb 7 21:41:23 EST 2017  Total:  50 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Wed Feb  8 14:10:35 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 5   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Wed Feb 8 14:10:35 EST 2017  Total:  50 of 50
+
+
+
+-------------------------------------------------
+CS240 Midterm 1: censorWord. fshafi   
+Wed Feb  8 14:34:46 EST 2017
+-------------------------------------------------
+task33 "A A A AA" "A"               : 5   of 5  
+task33 "O o AA" "o"                 : 5   of 5  
+task33 "1231123" "1"                : 5   of 5  
+task33 "A B C D A B C D" "C"        : 5   of 5  
+task33 "Hello world" "world"        : 5   of 5  
+task33 "Hello hEllo HELLO HellO hello_world" "HellO" : 5   of 5  
+task33 "What is the word for censor word function" "word" : 5   of 5  
+task33 "Yet another compiler compiler is called YACC" "compiler" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "troubles" : 5   of 5  
+task33 "Do not trouble trouble until trouble troubles you" "Troubles" : 5   of 5  
+-------------------------------------------------
+CS240 - Midterm 1: censorWord. fshafi Wed Feb 8 14:34:46 EST 2017  Total:  50 of 50
+

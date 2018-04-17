@@ -1,0 +1,14 @@
+Sun Apr 30 15:21:56 EDT 2017
++start test5
+Temporary breakpoint 1 at 0x401e8a: file mytest.cpp, line 208.
+Starting program: /home/u89/fshafi/cs240/Final-Exam-Practice/problems/problem_3/mytest test5
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffe058) at mytest.cpp:208
++s
++s
++s
++s
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs="test5", __rhs=0x40285b "test1") at /usr/lib/gcc/x86_64-pc-linux-gnu/4.9.3/include/g++-v4/bits/basic_string.h:2540
++s
+main (argc=2, argv=0x7fffffffe058) at mytest.cpp:219
++q
