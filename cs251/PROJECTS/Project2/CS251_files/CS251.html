@@ -1,0 +1,339 @@
+
+<!-- saved from url=(0056)https://www.cs.purdue.edu/homes/cs251/projects/project2/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CS25100: Data Structures and Algorithms, Project 2</title>
+    
+</head>
+
+
+<body><h1>CS25100: Data Structures and Algorithms, Fall 2017</h1>
+<h1>Project 2, Sorting</h1>
+
+<p>
+Handed out: <b>September 11, 2017</b><br>
+Due: <b>September 25 at 11:59pm</b>
+
+</p><hr>
+
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project2/examples.tgz">examples.tgz</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project2/stdlib.jar">stdlib.jar</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project2/algs4.jar">algs4.jar</a>
+
+<h2>Overview</h2>
+<p>
+The topic of this project is sorting. The goal is two-fold: First, you will
+acquire hands-on experience with the implementation of an advanced sorting
+algorithm. Second, you will learn how to use sorting to solve a practical
+problem efficiently. In the first part, you will implement an enhanced version
+of quicksort. In the second part, you will use sorting to solve a real-world
+application.
+
+</p><h2>Part 1 - Fast three-way partitioning. (J. Bentley and D. McIlroy)</h2>
+
+<h3>Basic Algorithm</h3>
+
+<p>
+You will implement an entropy-optimal sort <code>Quick3wayBM.java</code> based
+on keeping equal keys at both the left and right ends of the sub-array
+<code>a[lo,...,hi]</code>. Practically, you need to maintain indices that
+enforce the following invariants:
+
+</p><ul>
+<li>indices <code>p</code> and <code>q</code> are such that
+<code>a[lo,...,p]</code> and <code>a[q,...,hi]</code> are all equal to
+<code>a[lo]</code>
+</li><li>an index <code>i</code> is such that <code>a[p+1,...,i-1]</code>
+are all less than <code>a[lo]</code>
+</li><li>an index <code>j</code> is such that <code>a[j+1,...,q-1]</code>
+are all greater than <code>a[lo]</code>
+</li></ul>
+
+These notations are illustrated below.
+
+<center>
+<img src="./notations.png">
+</center>
+
+<p>
+In your code, you should add to the inner partitioning loop code to swap
+<code>a[i]</code> with <code>a[p+1]</code> (and increment <code>p</code>) if
+it is equal to <code>v</code>, and to swap <code>a[j]</code> with
+<code>a[q-1]</code> (and decrement <code>q</code>) if it is equal to
+<code>v</code>, after the usual comparisons of <code>a[i]</code> and
+<code>a[j]</code> with <code>v</code>. The partitioning should terminate when
+(<code>i</code> &gt; <code>j</code>), and you should treat (<code>i</code>
+== <code>j</code>) as a special case where you should just simply advance
+<code>j</code> by one and break the loop. After the partitioning loop has
+terminated, add code to swap the items with equal keys into position, whereby
+you will have to <code>swap(lo, j)</code> and then <code>swap(lo+1, j-1)</code>
+... <code>swap(j-k, p)</code>. Similarly you have to do the same for the
+elements to the right of <code>j</code>, <code>swap(j+1, hi)</code> ...
+<code>swap(j+w, q)</code>, whereby <code>k</code> (resp. <code>w</code>) are
+the number of duplicate elements to the left (resp. right) of the sub-array.
+
+</p><h3>Improvements</h3>
+
+<p>
+In your code, you must implement the following improvements:
+
+</p><ul>
+<li><b>Cutoff to insertion sort.</b> It usually pays off to switch to
+insertion sort for tiny arrays. The optimum value of the cutoff in your
+code MUST be 8.
+</li><li><b>Median-of-three partitioning.</b> A second improvement is to use the
+median of a small sample of items taken from the array as the partitioning
+item. Doing so will give a slightly better partition, but at the cost of
+computing the median. It turns out that most of the available improvement
+comes from choosing a sample of size 3 (and then partitioning on the middle
+item). You should ONLY use this improvement if the current number of elements
+to sort is (≤ 40).
+</li><li><b>Tukey ninther.</b> Use the <i>Tukey ninther</i> technique when the previous optimizations do not apply. In the Tukey ninether method, the partitioning element is selected as the median of 3 medians of three. Specifically, if your 9 evenly sampled values are: 
+  <em>(v0, v1, v2, v3, v4, v5, v6, v7, v8)</em>, 
+   
+  compute:<br>
+  <ul>
+    <li> <em>m0</em> = median(<em>v0, v1, v2</em>) </li>
+    <li> <em>m1</em> = median(<em>v3, v4, v5</em>) </li>
+    <li> <em>m2</em> = median(<em>v6, v7, v8</em>) </li>
+  </ul>
+   
+  and select median(<em>m0, m1, m2</em>) as your partitioning element.
+</li></ul>
+
+
+<h3>Note: Finding the Median</h3>
+
+<p>
+To find the median in Median-of-3 (resp. Tukey ninther) you should pick three
+(resp. nine) elements spaced in your sub-array by
+<code>floor((N-1)/2)</code> (resp. <code>floor((N-1)/8)</code>) starting from
+the first element, where <code>N</code> is the number of elements in the
+sub-array. Note that the 3rd (resp. 9th) selected element may not be the last
+element.
+
+</p><h3>Input / Output</h3>
+
+<p>
+Your program should read the input from <code>StdIn.java</code>. It should
+process the input using the following command:
+
+</p><pre>	%java -cp .:stdlib.jar:algs4.jar Quick3wayBM &lt; numbers1.txt
+</pre>
+
+<p>
+The file contains a list of numbers in the format (&lt;number&gt;&lt;space&gt;).
+The first number is the number of elements in the file.
+
+</p><p>
+In each recursive sorting call of the array you have to output the following as
+a tuple following the exact format shown below. Your program should simply print
+the output to the command line. In the case you used the insertion sort just
+output:
+
+</p><pre>	(Insertion Sort, &lt;lo&gt;, &lt;hi&gt;)
+</pre>
+
+<p>
+Otherwise, you should output:
+
+</p><pre>	(&lt;Improvement_used&gt;, &lt;lo&gt;, &lt;v&gt;, &lt;p&gt;, &lt;i&gt;, &lt;j&gt;, &lt;q&gt;, &lt;hi&gt;)
+</pre>
+
+<p>
+where <code>&lt;Improvement_used&gt;</code> will be either "<code>Median of 3</code>"
+or "<code>Tukey Ninther</code>", depending on the case.
+
+</p><p>
+As an example of the former scenario, your program should output:
+
+</p><pre>	(Insertion Sort, 1, 4)
+</pre>
+
+<p>
+As two examples of the latter scenario, your program should output:
+
+</p><pre>	(Median of 3, 1, 10, 4, 15, 16, 20, 25)
+	(Tukey Ninther, 6, 20, 4, 18, 17, 50, 70)
+</pre>
+
+<p>
+This output should take place <b>before</b> you move the equal values from the two ends
+of the array to the middle.
+
+</p><h3>Step-by-step output</h3>
+
+<p>
+In addition to the above output, you will augment your
+<code>Quick3wayBM.java</code> code and submit another file that provides
+a trace of the sorting steps, called <code>Quick3wayBM_V.java</code>. It should
+process the input just as above, with the command:
+
+</p><pre>	%java -cp .:stdlib.jar:algs4.jar Quick3wayBM_V &lt; numbers1.txt
+</pre>
+
+<p>
+Print to standard output the elements, separated by spaces, in their current
+order, with one line per recursive sorting call. The first line should be the
+original order of the elements, and the last line should be the sorted order
+of the elements. At each step, output the elements <b>after</b> moving the equal
+elements in the two ends of the array to the middle.
+
+</p><h3>Implementation</h3>
+
+<p>
+Implement the following API. In addition, implement a main function that reads
+from the standard input a list of numbers separated by a space. The first number
+represents the number of integers to be sorted, followed by those integers.
+
+</p><pre>	public class Quick3wayBM {
+	    public static void sort(Comparable[] a) { ... }
+	    public static void sort(Comparable[] a, int lo, int hi) {
+	        ...
+	        // Insertion sort
+	        ...
+	        // Median of 3
+	        ...
+	        // Use Tukey ninther as partitioning element
+	        ...
+	        // Bentley-McIlroy 3-way partitioning
+	        ...
+	    }
+	}
+</pre>
+
+<h3>Testing with an example</h3>
+
+<p>
+With this document, there are three examples of numbers as a way for you to test
+your code and make sure you are following the right format. These files are
+<code>numbers1.txt</code>, <code>numbers2.txt</code>, and <code>numbers3.txt</code>,
+where each of them provide two different outputs, (<code>output1.txt</code>,
+<code>outputV1.txt</code>), (<code>output2.txt</code>, <code>outputV2.txt</code>),
+and (<code>output3.txt</code>, <code>outputV3.txt</code>) respectively. You can
+find all example files <a href="https://www.cs.purdue.edu/homes/cs251/projects/project2/examples.tgz">here</a>, or at the top of the page.
+
+</p><h2>Part 2 - Sorting application: Rhyming words</h2>
+
+<h3>Overview</h3>
+
+<p>
+For your poetry class, you would like to tabulate a list of rhyming words. For
+example, if you had the following words (electrics, ethnic, clinic, coughed,
+laughed, metrics), your program should produce the following output:
+
+</p><pre>	[ cli|nic, eth|nic ]
+	[ elec|trics, me|trics ]
+	[ co|ughed, la|ughed ]
+</pre>
+
+<p>
+Write a program <code>Rhyming.java</code> that reads in a sequence of words from
+standard input and prints them out in the order specified above. Specifically, we
+define here rhyming words as a group of words sharing a rhyme, and we define that
+rhyme as being the longest possible suffix common to all words in the group. For
+instance, in the example above, we do not consider "ic", "ics", or "ed" to be
+rhymes because they are suffixes of longer common suffixes.
+
+</p><p>
+The output order is defined as follows.
+
+</p><ul>
+<li>Words are listed in increasing order of suffix length
+</li><li>Among suffixes of the same length, words are listed in alphabetical suffix order
+</li><li>Words with common suffix (rhyming words) are listed in alphabetical order
+</li></ul>
+
+<p>
+Looking back at the previous example: the suffixes are <b>nic</b> (length=3),
+<b>trics</b> (length=5), and <b>ughed</b> (length=5). They appear in that order as
+a result of rule 1 (length 3 before length 5) and rule 2 (<b>trics</b> comes before
+<b>ughed</b> alphabetically). Finally, each set of rhyming words are listed
+alphabetically (rule 3). In addition, groups of rhyming words are separated by a
+newline. Note that the same word can rhyme with different groups of words. For
+instance: (friendly, lucky, murky, rapidly) would lead to the following output:
+
+</p><pre>	[ friendl|y, luck|y, murk|y, rapidl|y ]
+	[ luc|ky, mur|ky ]
+	[ frien|dly, rapi|dly ]
+</pre>
+
+<p>
+Again, while "y" is not a rhyme for the group (lucky, murky) (it is a suffix
+of the actual rhyme "ky"), it is a rhyme for the group (friendly, lucky, murky,
+rapidly), as it is the longest common suffix.
+
+</p><h3>Input / Output</h3>
+
+<p>
+Your program should read from standard input, using <code>StdIn.java</code>. It
+should process the input using the following command line:
+
+</p><pre>	%java -cp .:stdlib.jar:algs4.jar Rhyming &lt; list1.txt
+</pre>
+
+<p>
+The file contains a list of strings, one string per line. Your program should
+output to standard output all the words sorted as the example stated above. To
+facilitate the visual assessment of your result, start each new line (corresponding
+to a series of rhyming words in alphabetical order) with an opening square bracket
+followed by a space character and, symmetrically, terminate each new line with a
+space character followed by a closing square bracket. In addition, each word should
+contain a pipe symbol ("|") that indicates the beginning of the identified suffix.
+Again, refer to the examples above and to the solution files provided below.
+
+</p><h3>Testing with an example</h3>
+
+<p>
+Three test files are available with corresponding solutions. Use them to verify that
+your code complies with all the guidelines listed above: <code>list1.txt</code>,
+<code>list2.txt</code>, and <code>list3.txt</code>, with <code>loutput1.txt</code>,
+<code>loutput2.txt</code>, and <code>loutput3.txt</code>, respectively. You can find
+all example files <a href="https://www.cs.purdue.edu/homes/cs251/projects/project2/examples.tgz">here</a>, or at the top of the page.
+
+</p><h2>Submission</h2>
+
+<p>
+Submit your solution on or before <b>Monday, September 25, 11:59pm</b>. The submission
+procedure is the same as for the first project. Inside your working directory for
+this project on data (e.g. <code>~/cs251/project2</code>), create a folder in which
+you will include all source code used and libraries needed to compile and run your
+code. Specifically, your submission must include the following files:
+
+</p><ul>
+<li><code>Quick3wayBM.java</code>
+</li><li><code>Quick3wayBM_V.java</code>
+</li><li><code>Rhyming.java</code>
+</li><li><code>stdlib.jar</code>
+</li><li><code>readme.txt</code> (if needed)
+</li></ul>
+
+<p>
+DO NOT use absolute paths in your files since they will become invalid once submitted.
+Optionally, you can include a README file to let us know about any known issues with
+your code (like errors, special conditions, etc).
+
+</p><p>
+After logging into <code>data.cs.purdue.edu</code>, please follow these steps to
+submit your assignment:
+
+</p><ul>
+<li>Enter the working directory for this project
+<pre>	%cd ~/cs251/project2
+</pre>
+</li><li>Make a directory named
+<code>&lt;your_first_name&gt;_&lt;your_last_name&gt;</code> and copy
+all the files needed to compile and run your code there.
+</li><li>While still in the working directory of your project (e.g.
+<code>~/cs251/project2</code>) execute the following turnin command:
+<pre>	%turnin -c cs251 -p project2 &lt;your_first_name&gt;_&lt;your_last_name&gt;
+</pre>
+</li><li>Keep in mind that old submissions are overwritten with new ones whenever you
+execute this command. You can verify the contents of your submission by executing
+the following command:
+<pre>	%turnin -v -c cs251 -p project2
+</pre>
+</li><li>Don't forget the <code>-v</code> flag here, as otherwise your submission would
+be replaced with an empty one.
+</li></ul>
+
+</body></html>

@@ -1,0 +1,202 @@
+
+<!-- saved from url=(0056)https://www.cs.purdue.edu/homes/cs251/projects/project3/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CS25100: Data Structures and Algorithms, Project 3</title>
+    
+</head>
+
+
+<body><h1>CS25100: Data Structures and Algorithms, Fall 2017</h1>
+<h1>Project 3</h1>
+
+<p>
+Handed out: <b>October 2, 2017</b><br>
+Due: <b>October 16 at 11:59pm</b>
+
+</p><hr>
+
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project3/examples.tgz">examples.tgz</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project3/stdlib.jar">stdlib.jar</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project3/algs4.jar">algs4.jar</a>
+
+<h2>Project Outline</h2>
+<p>
+The input consists of a set <code>S</code> of <code>N</code>
+two-dimensional records of integers,
+each of which consists of a pair of coordinates <code>(x[i],y[i])</code>
+for <code>0 ≤ i ≤ N-1</code>, where the <code>x[i]</code> are distinct
+(i.e., no two are equal) and the <code>y[i]</code> are also distinct.
+
+</p><p>
+Intuitively, the x coordinates represent one desirable attribute of each
+record, whereas the y coordinates represent another (different) desirable
+attribute of the record.
+
+</p><h2>Part 1</h2>
+
+<h3>Overview</h3>
+<p>
+Write a program that eliminates from <code>S</code> every record
+<code>(x[i],y[i])</code> for which
+there exists another record <code>(x[j],y[j])</code> having both
+<code>x[j] &gt; x[i]</code> and <code>y[j] &gt; y[i]</code>.
+
+</p><p>
+Intuitively, we want to eliminate all records that are doubly inferior to
+at least one other record, where "doubly" means in terms of both x coordinate
+and in terms of y coordinate.
+
+</p><p>
+Output the surviving ("filtered") records in <code>S</code> sorted according
+to increasing order of their x coordinates.
+
+</p><p>
+Note: You are allowed to use existing sorts (no need to write your own).
+
+</p><h3>Implementation</h3>
+<p>
+Create a class <code>Filter.java</code> to perform the task described above.
+Your program should process input using <code>StdIn.java</code> in the
+following format.
+
+</p><p>
+The first line consists of a single integer <code>N</code>, the number
+of records to read.
+This is followed by a list of <code>N</code> records, one per line,
+each consisting of two integers <code>x</code> and <code>y</code>
+separated by a space. The records do not appear in any specific order.
+
+</p><p>
+Your program should output the filtered, sorted records using
+<code>StdOut.java</code>. Write
+one record per line, <code>x</code> followed by <code>y</code> separated
+by a space.
+
+</p><p>
+We have provided example input / output files in the archive linked at
+the beginning of the handout. Use <code>filter1.txt</code>,
+<code>filter2.txt</code>, and <code>filter3.txt</code> as input, and
+<code>filter1out.txt</code>, <code>filter2out.txt</code>, and
+<code>filter3out.txt</code> as output to test your program.
+
+</p><h2>Part 2</h2>
+
+<h3>Overview</h3>
+<p>
+Put the sorted input <code>N</code> records (unfiltered) into an array,
+sorted by their x coordinates in increasing order. That array can be
+viewed as representing a complete binary tree <code>T</code>. For every
+node <code>v</code> of <code>T</code>, create an array <code>L[v]</code>
+that contains the records in the subtree of <code>v</code> in
+<code>T</code>, sorted according to their y coordinates. Note that this
+creates multiple copies of a record (as many as ther record's ancestors
+in <code>T</code>).
+
+</p><p>
+Hint: Create the <code>L[v]</code>'s in bottom-up order, so that you can
+obtain the <code>L[v]</code> of a <code>v</code> whose children are
+<code>u</code> and <code>w</code> by merging the already-computed
+<code>L[u]</code> with the already-computed <code>L[w]</code> and with
+<code>v</code>.
+
+</p><p>
+Use the tree <code>T</code> and the <code>L[v]</code> lists to efficiently
+process queries of the type <code>Q(a,b)</code> that outputs the records
+whose x coordinate is greater than <code>a</code> AND y coordinate is
+greater than <code>b</code>. The records output from each query should be
+sorted by their x coordinates in increasing order.
+
+</p><p>
+Performance for each such query should be
+O((log <code>N</code>)<sup>2</sup> + <code>m</code> log <code>m</code>)
+time where <code>m</code> is the number of output records.
+
+</p><p>
+Note: O(log <code>N</code> + <code>m</code> log <code>m</code>)
+time performance is possible, but not required.
+
+</p><h3>Implementation</h3>
+<p>
+Create a class <code>Query.java</code> to perform the task described
+above. Your program should process input using <code>StdIn.java</code>
+in the following format.
+
+</p><p>
+The first part of the input is the same as for part 1: the first line
+has a single integer <code>N</code>, followed by <code>N</code> records,
+one record per line, each consisting of two integers <code>x</code> and
+<code>y</code> separated by a space. As in part 1, the records do not
+appear in any specific order.
+The line following the last record
+contains a single integer <code>Q</code>, the number of queries to process.
+This is followed by <code>Q</code> lines, one query per line, consisting
+of two integers <code>a</code> and <code>b</code> separated by a space.
+Your program should process and output each query in the order it appears.
+
+</p><p>
+Your program should print the records output from each query to
+<code>StdOut.java</code>. For each query, output <code>m</code> records,
+one per line, each consisting of two integers <code>x</code> and
+<code>y</code> separated by a space, where <code>m</code> is the number of
+records returned by that query. If a query returns zero records, output
+a single line with the string "<code>none</code>" (without quotes).
+
+</p><p>
+As with part 1, we've included example input / output files in the
+archive linked at the top of the handout. Use <code>query1.txt</code>,
+<code>query2.txt</code>, and <code>query3.txt</code> as input, and
+<code>query1out.txt</code>, <code>query2out.txt</code>, and
+<code>query3out.txt</code> as output to test your program.
+
+</p><p>
+<b>Note:</b> since we require each query to have a specific complexity, your
+code will be timed to ensure this requirement is met. Specific time limits
+are yet to be determined.
+
+
+</p><h2>Submission</h2>
+
+<p>
+Submit your solution on or before <b>Monday, October 16, 11:59pm</b>.
+The submission procedure is the same as for previous projects. Inside your
+working directory for this project on data
+(e.g. <code>~/cs251/project3</code>), create a folder in which you will
+include all source code used and libraries needed to compile and run your
+code. Specifically, your submission must include the following files:
+
+</p><ul>
+<li><code>Filter.java</code>
+</li><li><code>Query.java</code>
+</li><li><code>readme.txt</code> (if needed)
+</li></ul>
+
+<p>
+DO NOT use absolute paths in your files since they will become invalid
+once submitted. Optionally, you can include a README file to let us know
+about any known issues with your code (like errors, special conditions, etc).
+
+</p><p>
+After logging into <code>data.cs.purdue.edu</code>, please follow these
+steps to submit your assignment:
+
+</p><ul>
+<li>Enter the working directory for this project
+<pre>	%cd ~/cs251/project3
+</pre>
+</li><li>Make a directory named
+<code>&lt;your_first_name&gt;_&lt;your_last_name&gt;</code> and copy
+all the files needed to compile and run your code there.
+</li><li>While still in the working directory of your project (e.g.
+<code>~/cs251/project3</code>) execute the following turnin command:
+<pre>	%turnin -c cs251 -p project3 &lt;your_first_name&gt;_&lt;your_last_name&gt;
+</pre>
+</li><li>Keep in mind that old submissions are overwritten with new ones whenever
+you execute this command. You can verify the contents of your submission by
+executing the following command:
+<pre>	%turnin -v -c cs251 -p project3
+</pre>
+</li><li>Don't forget the <code>-v</code> flag here, as otherwise your submission
+would be replaced with an empty one.
+</li></ul>
+
+</body></html>

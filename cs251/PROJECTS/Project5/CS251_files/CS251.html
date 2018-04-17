@@ -1,0 +1,184 @@
+
+<!-- saved from url=(0056)https://www.cs.purdue.edu/homes/cs251/projects/project5/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CS25100: Data Structures and Algorithms, Project 5</title>
+    
+</head>
+
+
+<body><h1>CS25100: Data Structures and Algorithms, Fall 2017</h1>
+<h1>Project 5</h1>
+
+<p>
+Handed out: <b>November 6, 2017</b><br>
+Due: <b>November 20 at 11:59pm</b>
+
+</p><hr>
+
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project5/examples.tgz">examples.tgz</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project5/stdlib.jar">stdlib.jar</a><br>
+<a href="https://www.cs.purdue.edu/homes/cs251/projects/project5/algs4.jar">algs4.jar</a>
+
+<h2>Overview</h2>
+<p>
+The input for this project is a connected undirected graph. Create
+an adjacency lists representation of the graph, where every adjacency
+list's contents are sorted by increasing order (this sortedness
+requirement is for the purpose of obtaining the output we expect, so
+that we can auto-grade it). Then do a depth-first search of that graph
+starting from its highest-numbered vertex, during which you must
+create a directed version of the input graph by assigning a direction
+to each of its undirected edges. For tree edges the assigned direction
+is from parent to child, for non-tree edges the assigned direction is
+from descendent to ancestor. Finally, determine whether the created
+directed graph is strongly connected or not. If the directed graph is
+not strongly connected, compute the smallest number of directed edges
+that would have to be added to the directed graph, in order to make
+it strongly connected.
+
+</p><h2>Implementation</h2>
+<p>
+Create a class <code>StronglyConnected.java</code> to perform the task
+described above. Your program should process input using
+<code>StdIn.java</code> in the format described on slide 16 of the
+lecture notes 13 on undirected graphs (except that, for this project,
+the graph will be connected). Specifically, the first line of input
+consists of a single integer <code>V</code>, the number of vertices in
+the graph. The second line is also a single integer <code>E</code>,
+the number of edges in the graph. This is followed by <code>E</code>
+edges, one edge per line, each consisting of two integers <code>u</code>
+and <code>v</code>, separated by a space. The edges do not appear in
+any specific order.
+
+</p><p>
+The desired output starts with a line consisting of a single integer
+<code>K</code>, the minimum number of directed edges that would have
+to be added to the directed graph in order to make it strongly connected
+(hence if <code>K</code> is 0 then the graph is strongly connected without
+adding any new directed edges to it).
+This is followed by a listing
+(one edge per line) of the resulting directed edges (each as an ordered
+pair of vertices separated by a space), in the same order in which the
+depth-first search assigned directions to them. Note that you list the
+directed edges whether the directed graph is strongly connected or not.
+
+</p><h2>Example</h2>
+<p>
+The input file contains:
+</p><pre>	7
+	8
+	0 5
+	4 3
+	0 1
+	6 4
+	5 4
+	0 2
+	0 6
+	5 3
+</pre>
+
+which represents the connected undirected graph below:
+
+<p></p><center>
+<img src="./graph.png">
+</center>
+
+<p>
+The adjacency list of vertex 4 should then contain 3, 5, 6 in that
+order. The depth-first search would start at vertex 6 and would visit
+the graph's vertices in the following order:
+
+</p><pre>	6, 0, 1, 2, 5, 3, 4
+</pre>
+
+<p>
+The resulting depth-first tree would have the following tree edges
+(listed as (parent, child) pairs):
+
+</p><pre>	(6,0), (0,1), (0,2), (0,5), (5,3), (3,4)
+</pre>
+
+<p>
+It would have the following two non-tree edges (listed as
+(descendent,ancestor) pairs):
+
+</p><pre>	(4,5), (4,6)
+</pre>
+
+<p>
+The order in which the depth-first search assigns the above directions
+to the edges would be:
+
+</p><pre>	(6,0), (0,1), (0,2), (0,5), (5,3), (3,4), (4,5), (4,6)
+</pre>
+
+<p>
+The desired output file for this example would then contain:
+
+</p><pre>	2
+	6 0
+	0 1
+	0 2
+	0 5
+	5 3
+	3 4
+	4 5
+	4 6
+</pre>
+
+<p>
+In the above output, <code>K</code> is 2 because a minimum of two
+directed edges must be added to the directed graph in order to make
+it strongly connected.
+(It is entirely coincidental that the tree edges appeared first. In
+general you could have some non-tree edges appear before some tree
+edges.)
+</p><p>
+Additional examples are included in <code>examples.tgz</code>, linked
+above.
+
+</p><h2>Submission</h2>
+
+<p>
+Submit your solution on or before <b>Monday, November 20, 11:59pm</b>.
+The submission procedure is the same as for previous projects. Inside your
+working directory for this project on data
+(e.g. <code>~/cs251/project5</code>), create a folder in which you will
+include all source code used and libraries needed to compile and run your
+code. Specifically, your submission must include the following files:
+
+</p><ul>
+<li><code>StronglyConnected.java</code>
+</li><li><code>readme.txt</code> (if needed)
+</li></ul>
+
+<p>
+DO NOT use absolute paths in your files since they will become invalid
+once submitted. Optionally, you can include a README file to let us know
+about any known issues with your code (like errors, special conditions, etc).
+
+</p><p>
+After logging into <code>data.cs.purdue.edu</code>, please follow these
+steps to submit your assignment:
+
+</p><ul>
+<li>Enter the working directory for this project
+<pre>	%cd ~/cs251/project5
+</pre>
+</li><li>Make a directory named
+<code>&lt;your_first_name&gt;_&lt;your_last_name&gt;</code> and copy
+all the files needed to compile and run your code there.
+</li><li>While still in the working directory of your project (e.g.
+<code>~/cs251/project5</code>) execute the following turnin command:
+<pre>	%turnin -c cs251 -p project5 &lt;your_first_name&gt;_&lt;your_last_name&gt;
+</pre>
+</li><li>Keep in mind that old submissions are overwritten with new ones whenever
+you execute this command. You can verify the contents of your submission by
+executing the following command:
+<pre>	%turnin -v -c cs251 -p project5
+</pre>
+</li><li>Don't forget the <code>-v</code> flag here, as otherwise your submission
+would be replaced with an empty one.
+</li></ul>
+
+</body></html>
