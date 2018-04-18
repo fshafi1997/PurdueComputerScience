@@ -1,0 +1,35 @@
+/*
+*Farhan Shafi
+*CS252
+*Lab4
+*/
+
+//Part 1: Thread Creation
+In step 3 the output of thr1.cc is just a combination between the three threads outputting the characters A, B, and C.
+The threads are created first so that is why they begin their outputting before the main thread.
+
+In step 5 thr2.cc just outputs C becuase the print function was called before the lines to create the thread. The main thread goes 
+into an infinite loop to ouput 'C' and thus never reaches the lines to create the threads.
+
+//Part 3. Spin locks
+---------------------------------------------------------------------------------------------------------
+|					   | System  (Kernel) Time	|   User Time	|   Real Time	|
+---------------------------------------------------------------------------------------------------------
+| pthread_mutex (count)			   |         0m1.175s		|    0m1.552s	|    0m1.374s	|
+---------------------------------------------------------------------------------------------------------
+| spin lock (count_spin with thr_yield)	   |         0m0.340s		|    0m0.683s	|    0m0.519s	|
+---------------------------------------------------------------------------------------------------------
+| spin_lock (count_spin without thr_yield) |         0m0.000s		|    0m2.573s	|    0m1.295s	|
+---------------------------------------------------------------------------------------------------------
+
+//Part 3-1
+the pthread_yield allows the thread to give up processing power if it cannot run a certain portion of code due to spin_lock.
+when no thr_yield is used the CPU is waiting for another thread to give up the CPU. 
+when thr_yield is used thread gives up the CPU when it hits the locked section and so the time spent on waiting in the process is small.
+
+//Part3-2
+The thread will take no time with the mutex locks because the threads are locked up with the user. 
+With thr_yield there is system time because of the checking for the thread to be done in the queue
+
+
+
