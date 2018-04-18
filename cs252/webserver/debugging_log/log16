@@ -1,0 +1,191 @@
+Fri Mar 23 09:27:52 EDT 2018
++b server.cc:341
+Breakpoint 1 at 0x40ad98: file src/server.cc, line 341.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:341
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    request=0x7fffffffe150) at src/server.cc:71
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 170
+Breakpoint 2 at 0x409ba6: file src/server.cc, line 170.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x627c50, request=0x7fffffffe150) at src/server.cc:170
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++s
+Server::processResponse (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    protocol=0x627c80 "HTTP/1.0", filePath=0x627cc0 "http-root-dir/htdocs/index.html", code=200, 
+    fileType=0x629a30 "html", dir=0) at src/server.cc:250
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p msgBodyFinal 
+$1 = "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n<html>\n  <head>\n    <title>CS422: HTTP Server</title>\n  </head>\n\n  <body>\n    <h1>CS252: HTTP Server</h1>\n\n    <ul>\n    <li><A HREF=\"simple.html\"> Simple"...
++n
++n
++n
++n
++n
++n
++n
++n
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    request=0x7fffffffe150) at src/server.cc:220
++n
++p theRequest
+$2 = "Host: data.cs.purdue.edu:7864\r\n"
++n
++n
++p httpV 
+$3 = "HTTP/1.1"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p theRequest
+$4 = "data.cs.purdue.edu:7864\r\n"
++n
++n
++n
+
+Program received signal SIGSEGV, Segmentation fault.
+__memcpy_sse2_unaligned () at ../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S:35
++q

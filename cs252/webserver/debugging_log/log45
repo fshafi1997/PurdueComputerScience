@@ -1,0 +1,212 @@
+Mon Mar 26 11:51:30 EDT 2018
++b server.cc:486
+Breakpoint 1 at 0x40bfa9: file src/server.cc, line 486.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2d0, sock=
+    std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:486
++s
+Server::process_Request (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    request=0x7fffffffe160) at src/server.cc:133
++b 283
+Breakpoint 2 at 0x40a95e: file src/server.cc, line 283.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe160) at src/server.cc:283
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p toAuthResult[1]
+$1 = "Y3MyNTI6bGFiNQ=="
++n
++n
++n
++n
++n
++s
+Server::processResponse (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    protocol=0x629c80 "HTTP/1.0", filePath=0x629cc0 "http-root-dir/htdocs/index.html", code=200, 
+    fileType=0x62ba30 "html", dir=0, headerCheck=1) at src/server.cc:381
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p msgBodyFinal 
+$2 = "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n<html>\n  <head>\n    <title>CS422: HTTP Server</title>\n  </head>\n\n  <body>\n    <h1>CS252: HTTP Server</h1>\n\n    <ul>\n    <li><A HREF=\"simple.html\"> Simple"...
++n
++n
++n
++n
++n
++n
++n
++n
+Server::process_Request (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    request=0x7fffffffe160) at src/server.cc:300
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+Server::handle (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x629c50)
+    at src/server.cc:482
++n
++n
+Server::run_linear (this=0x7fffffffe2d0) at src/server.cc:41
++n
++n
++n
++n
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:486
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe160) at src/server.cc:283
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+Server::handle (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x629c50)
+    at src/server.cc:482
++n
++n
+Server::run_linear (this=0x7fffffffe2d0) at src/server.cc:41
++n
++n
++n
++n
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:486
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe160) at src/server.cc:283
+Quit
++q

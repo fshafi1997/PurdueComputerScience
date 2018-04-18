@@ -1,0 +1,11 @@
+Wed Mar 28 14:40:43 EDT 2018
++b server.cc:486
+Breakpoint 1 at 0x40cf85: file src/server.cc, line 486.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd -f 7860
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff732412a in wait4 () at ../sysdeps/unix/syscall-template.S:84
++q

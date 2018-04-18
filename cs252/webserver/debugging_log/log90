@@ -1,0 +1,42 @@
+Fri Mar 30 16:04:05 EDT 2018
++b server.cc:145
+Breakpoint 1 at 0x40a916: file src/server.cc, line 145.
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf20, sock=
+    std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddb0) at src/server.cc:145
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf20, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddb0) at src/server.cc:145
++p theRequest 
+$1 = "GET /dir1 HTTP/1.1\r\n"
++n
++n
++n
++n
++n
++n
++b 231
+Breakpoint 2 at 0x40aee0: file src/server.cc, line 231.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffdf20, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddb0) at src/server.cc:231
++n
++p theRequest
+$2 = "HTTP/1.1\r\n"
++p request->request_uri 
+$3 = "/dir1"
++p filePath 
+$4 = 0x635210 "/dir1"
++n
++n
++p filePath 
+$5 = 0x635210 "/dir1"
++q

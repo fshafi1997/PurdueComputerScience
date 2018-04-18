@@ -1,0 +1,33 @@
+Mon Mar 26 20:39:14 EDT 2018
++b server.cc:501
+Breakpoint 1 at 0x40cfcd: file src/server.cc, line 501.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++n
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff795736e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
++q

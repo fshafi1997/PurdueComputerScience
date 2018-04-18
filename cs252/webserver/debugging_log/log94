@@ -1,0 +1,213 @@
+Sun Apr 1 19:12:26 EDT 2018
++b server.cc:145
+Breakpoint 1 at 0x40ae86: file src/server.cc, line 145.
++dun
+Undefined command: "dun".  Try "help".
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, sock=
+    std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++p theRequest 
+$1 = "GET /favicon.ico HTTP/1.1\r\n"
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++p theRequest 
+$2 = "GET /dir1 HTTP/1.1\r\n"
++n
++b 231
+Breakpoint 2 at 0x40b450: file src/server.cc, line 231.
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:145
++p theRequest 
+$3 = "GET /dir1 HTTP/1.1\r\n"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 185
+Breakpoint 3 at 0x40b215: file src/server.cc, line 185.
++c
+Continuing.
+
+Breakpoint 3, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:185
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p filePath 
+$4 = 0x637210 "/dir1"
++n
++n
++n
++n
++p forRoot 
+$5 = "http-root-dir/htdocs/dir1"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 325
+Breakpoint 4 at 0x40bc03: file src/server.cc, line 325.
++c
+Continuing.
+
+Breakpoint 4, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:325
++n
++n
++n
++b 364
+Breakpoint 5 at 0x40c1f5: file src/server.cc, line 364.
++c
+Continuing.
+
+Breakpoint 5, Server::process_Request (this=0x7fffffffe2d0, 
+    sock=std::unique_ptr<Socket> containing 0x635c50, request=0x7fffffffe160) at src/server.cc:364
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p pDir 
+$6 = (DIR *) 0x638cd0
++n
++s
+Server::processResponse (this=0x7fffffffe2d0, sock=std::unique_ptr<Socket> containing 0x635c50, 
+    protocol=0x637c20 "HTTP/1.0", filePath=0x637c70 "http-root-dir/htdocs/dir1", code=200, 
+    fileType=0x637620 "", dir=1, headerCheck=1) at src/server.cc:447
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++q

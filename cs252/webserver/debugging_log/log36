@@ -1,0 +1,67 @@
+Sat Mar 24 15:13:54 EDT 2018
++b server.cc:421
+Breakpoint 1 at 0x40bd83: file src/server.cc, line 421.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:421
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:421
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    request=0x7fffffffe150) at src/server.cc:108
++s
++s
+std::unique_ptr<Socket, std::default_delete<Socket> >::operator-> (this=0x7fffffffe260)
+    at /usr/include/c++/5/bits/unique_ptr.h:299
++s
+std::unique_ptr<Socket, std::default_delete<Socket> >::get (this=0x7fffffffe260)
+    at /usr/include/c++/5/bits/unique_ptr.h:305
++s
+std::get<0ul, Socket*, std::default_delete<Socket> > (__t=std::tuple containing = {...})
+    at /usr/include/c++/5/tuple:839
++s
+std::__get_helper<0ul, Socket*, std::default_delete<Socket> > (__t=...)
+    at /usr/include/c++/5/tuple:827
++s
+std::_Tuple_impl<0ul, Socket*, std::default_delete<Socket> >::_M_head (__t=...)
+    at /usr/include/c++/5/tuple:193
++s
+std::_Head_base<0ul, Socket*, false>::_M_head (__b=...) at /usr/include/c++/5/tuple:145
++s
+std::unique_ptr<Socket, std::default_delete<Socket> >::operator-> (this=0x7fffffffe260)
+    at /usr/include/c++/5/bits/unique_ptr.h:300
++s
+TCPSocket::readline[abi:cxx11]() (this=0x629c50) at src/tcp.cc:61
++s
++s
++s
+TCPSocket::getc (this=0x629c50) at src/tcp.cc:40
++s
++s
+__libc_recv (fd=4, buf=0x7fffffffdd86, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++s
++s
+TCPSocket::getc (this=0x629c50) at src/tcp.cc:43
++s
++s
++s
++s
++s
+TCPSocket::readline[abi:cxx11]() (this=0x629c50) at src/tcp.cc:65
++s
++s
+TCPSocket::getc (this=0x629c50) at src/tcp.cc:40
++s
++s
+__libc_recv (fd=4, buf=0x7fffffffdd86, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++q

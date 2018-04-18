@@ -1,0 +1,96 @@
+Sat Mar 24 15:34:57 EDT 2018
++b server.cc:254
+Breakpoint 1 at 0x40a815: file src/server.cc, line 254.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p headerValues 
+$1 = std::vector of length 9, capacity 16 = {
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", 
+  "gzip, deflate", "en-GB,en-US;q=0.9,en;q=0.8", "Basic Y3MyNTI6bGFiNQ==", "keep-alive", 
+  "fs_uid=www.fullstory.com`7Sy`6035872890486784:5629499534213120; _ga=GA1.2.363667748.1508868764; __utma=141228339.363667748.1508868764.1521581584.1521592485.31; __utmz=141228339.1521592485.31.29.utmcsr"..., "data.cs.purdue.edu:7864", "1", 
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
++p headerKeys 
+$2 = std::vector of length 9, capacity 16 = {"Accept", "Accept-Encoding", "Accept-Language", 
+  "Authorization", "Connection", "Cookie", "Host", "Upgrade-Insecure-Requests", "User-Agent"}
++jump +2
+Continuing at 0x40a956.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++q

@@ -1,0 +1,23 @@
+Thu Mar 22 23:47:06 EDT 2018
++b server.cc:326
+Breakpoint 1 at 0x40ab4a: file src/server.cc, line 326.
++start
+Temporary breakpoint 2 at 0x407c12: file src/main.cc, line 29.
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe4f8) at src/main.cc:29
+29	int main(int argc, char** argv) {
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:326
+326	void Server::handle(const Socket_t& sock) const {
++c
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff757d0a0 in __accept_nocancel () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+Quit
++q

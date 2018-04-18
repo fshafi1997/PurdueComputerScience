@@ -1,0 +1,48 @@
+Fri Mar 23 00:07:03 EDT 2018
++b server.cc:326
+Breakpoint 1 at 0x40abc8: file src/server.cc, line 326.
++start
+Temporary breakpoint 2 at 0x407c42: file src/main.cc, line 29.
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe4f8) at src/main.cc:29
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:326
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    request=0x7fffffffe150) at src/server.cc:71
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p theRequest22
+$1 = "/dir1/index.html"
++q

@@ -1,0 +1,30 @@
+Wed Mar 28 20:26:46 EDT 2018
++b server.cc:143
+Breakpoint 1 at 0x40a7f0: file src/server.cc, line 143.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:143
++c
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff7bca81d in __libc_recv (fd=4, buf=0x7fffffffdd96, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++r
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:143
++b server.c
+Function "server.c" not defined.
+Please answer y or [n].
+Please answer y or [n].
++b server.c
+Function "server.c" not defined.
++q

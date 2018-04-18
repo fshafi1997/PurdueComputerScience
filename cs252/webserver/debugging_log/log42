@@ -1,0 +1,33 @@
+Sat Mar 24 15:47:19 EDT 2018
++b server.cc:254
+Breakpoint 1 at 0x40a815: file src/server.cc, line 254.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:255
++c
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff7bca81d in __libc_recv (fd=4, buf=0x7fffffffde16, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++c
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff7bca81d in __libc_recv (fd=4, buf=0x7fffffffde16, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++q

@@ -1,0 +1,205 @@
+Sat Mar 24 14:29:58 EDT 2018
++b server.cc:415
+Breakpoint 1 at 0x40bc98: file src/server.cc, line 415.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:415
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    request=0x7fffffffe150) at src/server.cc:108
++b 247
+Breakpoint 2 at 0x40a7b3: file src/server.cc, line 247.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++n
++n
++n
++n
++n
++p theRequest 
+$1 = "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36\r\n"
++n
++n
++n
++n
++n
++n
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++n
++n
++n
++n
++n
++p theRequest 
+$2 = "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\n"
++n
++n
++n
++n
++n
++n
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++b 253
+Breakpoint 3 at 0x40a80f: file src/server.cc, line 253.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++n
++n
++n
+
+Breakpoint 3, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:253
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
+Server::handle (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x629c50)
+    at src/server.cc:416
++n
++n
+Server::run_linear (this=0x7fffffffe2c0) at src/server.cc:37
++n
++n
++n
++s
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:415
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x629c50, 
+    request=0x7fffffffe150) at src/server.cc:108
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50, request=0x7fffffffe150) at src/server.cc:249
++q

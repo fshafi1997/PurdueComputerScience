@@ -1,0 +1,250 @@
+Wed Mar 28 15:25:30 EDT 2018
++b server.cc:546
+Breakpoint 1 at 0x40d265: file src/server.cc, line 546.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:546
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++n
++n
++n
++n
++n
++p theRequest 
+$1 = "GET /cgi-bin/archieffddggggd HTTP/1.1\r\n"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 286
+Breakpoint 2 at 0x40b265: file src/server.cc, line 286.
++c
+Continuing.
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
++r
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:546
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p request->method 
+$2 = "GET"
++n
++p request->request_uri 
+$3 = "/cgi-bin/archieffddggggd"
++n
++n
++n
++n
++n
++p request->http_version 
+$4 = "HTTP/1.1"
++n
++p theRequest22 
+$5 = "/cgi-bin/archieffddggggd"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p theRequest22
+$6 = "/cgi-bin/archieffddggggd"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 214
+Breakpoint 3 at 0x40ac16: file src/server.cc, line 214.
++c
+Continuing.
+
+Breakpoint 3, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:214
++b 230
+Breakpoint 4 at 0x40ace3: file src/server.cc, line 230.
++c
+Continuing.
+
+Breakpoint 4, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:230
++p cgi
+$7 = 1
++n
++n
++n
++n
++p root
+$8 = 0x631cd0 "http-root-dir/cgi-bin"
++p root
+$9 = 0x631cd0 "http-root-dir/cgi-bin"
++n
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+0	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c

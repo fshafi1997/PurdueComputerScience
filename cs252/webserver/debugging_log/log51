@@ -1,0 +1,45 @@
+Mon Mar 26 18:03:45 EDT 2018
++b server.cc:436
+Breakpoint 1 at 0x40c9cf: file src/server.cc, line 436.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50)
+    at src/server.cc:436
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p splitResult[1]
+$1 = "/cgi-bin/xxxxuuuu"
++n
++q

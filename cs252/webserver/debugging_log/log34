@@ -1,0 +1,27 @@
+Sat Mar 24 15:09:53 EDT 2018
++b server.cc:421
+Breakpoint 1 at 0x40bd83: file src/server.cc, line 421.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:421
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x629c50) at src/server.cc:421
++c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff795736e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
++n
+Single stepping until exit from function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_,
+which has no line number information.
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
++q

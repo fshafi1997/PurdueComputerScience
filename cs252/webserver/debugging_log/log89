@@ -1,0 +1,106 @@
+Fri Mar 30 10:53:55 EDT 2018
++b server.cc:143
+Breakpoint 1 at 0x40a830: file src/server.cc, line 143.
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, sock=
+    std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++p theRequest 
+$1 = ""
++c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff795736e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
++r
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++p theRequest 
+$2 = "GET /cgi-bin/test-cgi?SERVER_NAME=cs252&AUTH_TYPE=value HTTP/1.1\r\n"
++b 301
+Breakpoint 2 at 0x40b457: file src/server.cc, line 301.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:301
++n
++n
++p cwd
+$3 = 0x636020 "/cgi-bin/test-cgi?SERVER_NAME=cs252&AUTH_TYPE=value"
++n
++p envVar 
+$4 = 0x636031 "?SERVER_NAME=cs252&AUTH_TYPE=value"
++n
++n
++p theQuery[1]
+$5 = "SERVER_NAME=cs252&AUTH_TYPE=value"
++n
++n
++n
++p thePairs[0]
+$6 = "SERVER_NAME=cs252"
++p thePairs[1]
+$7 = "AUTH_TYPE=value"
++n
++n
++n
++p keyValue[0]
+$8 = "SERVER_NAME"
++p keyValue[1]
+$9 = "cs252"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:301
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:143
++q

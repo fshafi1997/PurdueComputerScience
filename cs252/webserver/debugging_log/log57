@@ -1,0 +1,12 @@
+Mon Mar 26 20:24:52 EDT 2018
++b server.cc:500
+Breakpoint 1 at 0x40cef9: file src/server.cc, line 500.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+warning: Source file is more recent than executable.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:500
+Quit
++q

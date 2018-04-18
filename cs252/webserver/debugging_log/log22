@@ -1,0 +1,38 @@
+Fri Mar 23 10:24:10 EDT 2018
++b server.cc:368
+Breakpoint 1 at 0x40b0ec: file src/server.cc, line 368.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:368
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    request=0x7fffffffe150) at src/server.cc:71
++b 223
+Breakpoint 2 at 0x409fb3: file src/server.cc, line 223.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2c0, 
+    sock=std::unique_ptr<Socket> containing 0x627c50, request=0x7fffffffe150) at src/server.cc:224
++p theRequest 
+$1 = "Host: data.cs.purdue.edu:7864\r\n"
++n
++n
++n
++n
++n
++p pos
+$2 = 4
++n
++p token
+$3 = "Host"
++n
++n
++n
++q

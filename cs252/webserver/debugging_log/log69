@@ -1,0 +1,42 @@
+Tue Mar 27 13:39:57 EDT 2018
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd -p10 7860
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6f4e700 (LWP 21498)]
+[New Thread 0x7ffff674d700 (LWP 21499)]
+[New Thread 0x7ffff5f4c700 (LWP 21500)]
+[New Thread 0x7ffff574b700 (LWP 21501)]
+[New Thread 0x7ffff4f4a700 (LWP 21502)]
+[New Thread 0x7ffff4749700 (LWP 21503)]
+[New Thread 0x7ffff3f48700 (LWP 21504)]
+[New Thread 0x7ffff3747700 (LWP 21505)]
+[New Thread 0x7ffff2f46700 (LWP 21506)]
+
+Thread 1 "myhttpd" received signal SIGABRT, Aborted.
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+54	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
++where
+#0  0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+#1  0x00007ffff728f02a in __GI_abort () at abort.c:89
+#2  0x00007ffff78c77dd in __gnu_cxx::__verbose_terminate_handler() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff78c56b6 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff78c5701 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff78c5919 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007ffff78c5ebc in operator new(unsigned long) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x0000000000410c4c in __gnu_cxx::new_allocator<char>::allocate (this=0x7fffffffd480, __n=18446744073709551615) at /usr/include/c++/5/ext/new_allocator.h:104
+#8  0x0000000000410891 in std::allocator_traits<std::allocator<char> >::allocate (__a=..., __n=18446744073709551615) at /usr/include/c++/5/bits/alloc_traits.h:491
+#9  0x00000000004105c2 in std::_Vector_base<char, std::allocator<char> >::_M_allocate (this=0x7fffffffd480, __n=18446744073709551615) at /usr/include/c++/5/bits/stl_vector.h:170
+#10 0x000000000040fed3 in std::_Vector_base<char, std::allocator<char> >::_M_create_storage (this=0x7fffffffd480, __n=18446744073709551615) at /usr/include/c++/5/bits/stl_vector.h:185
+#11 0x000000000040eb87 in std::_Vector_base<char, std::allocator<char> >::_Vector_base (this=0x7fffffffd480, __n=18446744073709551615, __a=...) at /usr/include/c++/5/bits/stl_vector.h:136
+#12 0x000000000040da00 in std::vector<char, std::allocator<char> >::vector (this=0x7fffffffd480, __n=18446744073709551615, __a=...) at /usr/include/c++/5/bits/stl_vector.h:278
+#13 0x000000000040bc94 in readFile2 (fileName="http-root-dir/htdocs/index.html") at src/server.cc:368
+#14 0x000000000040c5cd in Server::processResponse (this=0x7fffffffdf70, sock=std::unique_ptr<Socket> containing 0x632d20, protocol=0x633160 "HTTP/1.0", filePath=0x6331a0 "http-root-dir/htdocs/index.html", 
+    code=200, fileType=0x63fdb0 "html", dir=0, headerCheck=1) at src/server.cc:420
+#15 0x000000000040b6db in Server::process_Request (this=0x7fffffffdf70, sock=std::unique_ptr<Socket> containing 0x632d20, request=0x7fffffffdd00) at src/server.cc:320
+#16 0x000000000040ca25 in Server::handle (this=0x7fffffffdf70, sock=std::unique_ptr<Socket> containing 0x632d20) at src/server.cc:440
+#17 0x000000000040a264 in Server::threadPool (this=0x7fffffffdf70) at src/server.cc:88
+#18 0x000000000040a3f8 in Server::run_thread_pool (this=0x7fffffffdf70, num_threads=10) at src/server.cc:102
+#19 0x0000000000408c3c in main (argc=3, argv=0x7fffffffe178) at src/main.cc:135
+Quit
++q

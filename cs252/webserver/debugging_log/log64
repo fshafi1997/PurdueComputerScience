@@ -1,0 +1,41 @@
+Mon Mar 26 20:43:49 EDT 2018
++b server.cc:501
+Breakpoint 1 at 0x40cfcd: file src/server.cc, line 501.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++n
++n
++p theR	
+No symbol "theR" in current context.
++p theRequest 
+$1 = "GET / HTTP/1.1\r\n"
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++n
++n
++p theRequest 
+$2 = "GET / HTTP/1.1\r\n"
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:501
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180)
+    at src/server.cc:164
++n
++n
++p theRequest 
+$3 = "GET /cgi-bin/test-env HTTP/1.1\r\n"
++q

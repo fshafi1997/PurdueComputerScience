@@ -1,0 +1,28 @@
+Mon Mar 26 18:16:03 EDT 2018
++b server.cc:438
+Breakpoint 1 at 0x40ca13: file src/server.cc, line 438.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50)
+    at src/server.cc:438
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++b 232
+Breakpoint 2 at 0x40ac7b: file src/server.cc, line 232.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50, 
+    request=0x7fffffffe180) at src/server.cc:233
++n
++n
++n
++n
++n
++p root
+$1 = 0x630cc0 "http-root-dir/cgi-binhttp-root-dir/cgi-bin/"
++q

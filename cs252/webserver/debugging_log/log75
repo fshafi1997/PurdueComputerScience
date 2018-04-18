@@ -1,0 +1,47 @@
+Wed Mar 28 15:31:33 EDT 2018
++b server.cc:548
+Breakpoint 1 at 0x40d273: file src/server.cc, line 548.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:548
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++b 230
+Breakpoint 2 at 0x40ace3: file src/server.cc, line 230.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:230
++n
++n
++n
++n
++p root 
+$1 = 0x631cd0 "http-root-dir/cgi-bin"
++n
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
++where
+#0  0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+#1  0x00007ffff728f02a in __GI_abort () at abort.c:89
+#2  0x00007ffff72cf7ea in __libc_message (do_abort=do_abort@entry=2, 
+    fmt=fmt@entry=0x7ffff73e8ed8 "*** Error in `%s': %s: 0x%s ***\n")
+    at ../sysdeps/posix/libc_fatal.c:175
+#3  0x00007ffff72d837a in malloc_printerr (ar_ptr=<optimized out>, ptr=<optimized out>, 
+    str=0x7ffff73e5caf "free(): invalid pointer", action=3) at malloc.c:5006
+#4  _int_free (av=<optimized out>, p=<optimized out>, have_lock=0) at malloc.c:3867
+#5  0x00007ffff72dc53c in __GI___libc_free (mem=<optimized out>) at malloc.c:2968
+#6  0x000000000040afd2 in Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:266
+#7  0x000000000040d293 in Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:548
+#8  0x000000000040a045 in Server::run_linear (this=0x7fffffffe2f0) at src/server.cc:45
+#9  0x0000000000408c9d in main (argc=2, argv=0x7fffffffe4f8) at src/main.cc:138
++q

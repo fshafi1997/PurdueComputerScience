@@ -1,0 +1,12 @@
+Mon Mar 26 18:02:54 EDT 2018
++b server.cc:426
+Breakpoint 1 at 0x40c5f2: file src/server.cc, line 426.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::processResponse (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x630c50, 
+    protocol=0x630c80 "HTTP/1.0", filePath=0x630cc0 "http-root-dir/htdocs/cgi-bin/xxxxuuuu", code=401, 
+    fileType=0x632a30 "", dir=1, headerCheck=0) at src/server.cc:426
++q

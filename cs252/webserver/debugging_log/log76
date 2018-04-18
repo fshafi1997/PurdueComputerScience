@@ -1,0 +1,33 @@
+Wed Mar 28 15:38:22 EDT 2018
++b server.cc:547
+Breakpoint 1 at 0x40d225: file src/server.cc, line 547.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:547
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:547
++c
+Continuing.
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+../sysdeps/unix/sysv/linux/raise.c:1: No such file or directory.
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
+	in /build/glibc-Cl5G7W/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c
++q

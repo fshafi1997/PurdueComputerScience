@@ -1,0 +1,11 @@
+Fri Mar 23 12:34:14 EDT 2018
++b server.cc:384
+Breakpoint 1 at 0x40ae00: file src/server.cc, line 384.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff7bca750 in __accept_nocancel () at ../sysdeps/unix/syscall-template.S:84
++q

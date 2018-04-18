@@ -1,0 +1,78 @@
+Fri Mar 23 10:02:00 EDT 2018
++b server.cc:362
+Breakpoint 1 at 0x40b0b0: file src/server.cc, line 362.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:362
++run
+Program not restarted.
++c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+__memcpy_sse2_unaligned () at ../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S:35
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+0	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S
+	in /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-sse2-unaligned.S

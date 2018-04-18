@@ -1,0 +1,54 @@
+Wed Mar 28 19:31:54 EDT 2018
++b server.cc:552
+Breakpoint 1 at 0x40d36d: file src/server.cc, line 552.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:552
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:552
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++n
++n
++p theRequest 
+$1 = ""
++c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff795736e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
++r
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:552
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:552
++c
+Continuing.
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:552
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++n
++n
+
+Program received signal SIGINT, Interrupt.
+0x00007ffff7bca81d in __libc_recv (fd=4, buf=0x7fffffffdd96, n=1, flags=0)
+    at ../sysdeps/unix/sysv/linux/x86_64/recv.c:28
++q

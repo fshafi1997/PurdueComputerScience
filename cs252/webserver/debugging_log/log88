@@ -1,0 +1,21 @@
+Fri Mar 30 10:47:55 EDT 2018
++b server.cc:152
+Breakpoint 1 at 0x40a87b: file src/server.cc, line 152.
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, sock=
+    std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:152
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:152
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf30, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffddc0) at src/server.cc:152
++q

@@ -1,0 +1,251 @@
+Fri Mar 23 00:09:20 EDT 2018
++b server.cc:326
+Breakpoint 1 at 0x40abc8: file src/server.cc, line 326.
++start
+Temporary breakpoint 2 at 0x407c42: file src/main.cc, line 29.
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=2, argv=0x7fffffffe4f8) at src/main.cc:29
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2c0, sock=
+    std::unique_ptr<Socket> containing 0x627c50) at src/server.cc:326
++n
++n
++s
+Server::process_Request (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    request=0x7fffffffe150) at src/server.cc:71
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p theRequest22
+$1 = "/index.html"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p filePath 
+$2 = 0x629210 "/index.html"
++n
++n
++n
++n
++n
++n
++p newChar 
+$3 = 105 'i'
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p filePath 
+$4 = 0x629210 "/index.html"
++p lastChar 
+$5 = 108 'l'
++n
++n
++n
++n
++p root 
+$6 = 0x627cc0 "http-root-dir/htdocs/index.html"
++n
++n
++n
++n
++s
+Server::processResponse (this=0x7fffffffe2c0, sock=std::unique_ptr<Socket> containing 0x627c50, 
+    protocol=0x627c80 "HTTP/1.0", filePath=0x627cc0 "http-root-dir/htdocs/index.html", code=200, 
+    fileType=0x629a30 "html", dir=0) at src/server.cc:239
++n
++n
++n
++n
++n
++n
++p fileType 
+$7 = 0x629a30 "html"
++n
++n
++n
++n
++n
++n
++n
++p in
+$8 = (FILE *) 0x629e40
++n
++n
++n
++p buffer
+$9 = 0x627e20 "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n<html>\n  <head>\n    <title>CS422: HTTP Server</title>\n  </head>\n\n  <body>\n    <h1"
++n
++p msgBody 
+$10 = "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n<html>\n  <head>\n    <title>CS422: HTTP Server</title>\n  </head>\n\n  <body>\n    <h1"
++n
++n
++n
++n
++n
++n
++p msgBody 
+$11 = ">CS252: HTTP Server</h1>\n\n    <ul>\n    <li><A HREF=\"simple.html\"> Simple Test</A>\n    <li><A HREF=\"complex.html\"> Complex Test</"
++q

@@ -1,0 +1,78 @@
+Wed Mar 28 15:46:32 EDT 2018
++b server.cc:548
+Breakpoint 1 at 0x40d265: file src/server.cc, line 548.
++run
+Starting program: /home/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::handle (this=0x7fffffffe2f0, sock=
+    std::unique_ptr<Socket> containing 0x631c50) at src/server.cc:548
++s
+Server::process_Request (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    request=0x7fffffffe180) at src/server.cc:140
++b 230
+Breakpoint 2 at 0x40acec: file src/server.cc, line 230.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:230
++n
++n
++p forRoot 
+$1 = "http-root-dir/cgi-bin/cgi-test"
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++b 288
+Breakpoint 3 at 0x40b263: file src/server.cc, line 288.
++c
+Continuing.
+
+Breakpoint 3, Server::process_Request (this=0x7fffffffe2f0, 
+    sock=std::unique_ptr<Socket> containing 0x631c50, request=0x7fffffffe180) at src/server.cc:288
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++n
++p cwd
+$2 = 0x631e90 "/cgi-bin/cgi-test"
++n
++n
++n
++n
++s
+Server::processResponse (this=0x7fffffffe2f0, sock=std::unique_ptr<Socket> containing 0x631c50, 
+    protocol=0x631c80 "HTTP/1.0", filePath=0x631cd0 "http-root-dir/cgi-bin/cgi-test", code=401, 
+    fileType=0x633620 "", dir=0, headerCheck=0) at src/server.cc:411
++n
++p filePath 
+$3 = 0x631cd0 "http-root-dir/cgi-bin/cgi-test"
++q

@@ -1,0 +1,33 @@
+Fri Mar 30 16:23:00 EDT 2018
++b server.cc:146
+Breakpoint 1 at 0x40a921: file src/server.cc, line 146.
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd 7864
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf10, sock=
+    std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffdda0) at src/server.cc:146
++c
+Continuing.
+
+Breakpoint 1, Server::process_Request (this=0x7fffffffdf10, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffdda0) at src/server.cc:146
++p theRequest 
+$1 = "GET /icons HTTP/1.1\r\n"
++b 231
+Breakpoint 2 at 0x40aee0: file src/server.cc, line 231.
++c
+Continuing.
+
+Breakpoint 2, Server::process_Request (this=0x7fffffffdf10, 
+    sock=std::unique_ptr<Socket> containing 0x633c50, request=0x7fffffffdda0) at src/server.cc:231
++p filePath 
+$2 = 0x63e560 "/icons"
++n
++n
++n
++p filePath 
+$3 = 0x63e560 "/icons"
++n
++q

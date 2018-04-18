@@ -1,0 +1,31 @@
+Tue Mar 27 13:39:01 EDT 2018
++run
+Starting program: /u/data/u89/fshafi/cs252/lab5-src/myhttpd -p10 7860
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6f4e700 (LWP 21330)]
+[New Thread 0x7ffff674d700 (LWP 21331)]
+[New Thread 0x7ffff5f4c700 (LWP 21332)]
+[New Thread 0x7ffff574b700 (LWP 21333)]
+[New Thread 0x7ffff4f4a700 (LWP 21334)]
+[New Thread 0x7ffff4749700 (LWP 21335)]
+[New Thread 0x7ffff3f48700 (LWP 21336)]
+[New Thread 0x7ffff3747700 (LWP 21337)]
+[New Thread 0x7ffff2f46700 (LWP 21338)]
+
+Thread 4 "myhttpd" received signal SIGABRT, Aborted.
+[Switching to Thread 0x7ffff5f4c700 (LWP 21332)]
+0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+54	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
++where
+#0  0x00007ffff728d428 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:54
+#1  0x00007ffff728f02a in __GI_abort () at abort.c:89
+#2  0x00007ffff78c77dd in __gnu_cxx::__verbose_terminate_handler() ()
+   from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff78c56b6 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff78c5701 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff78f0d38 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007ffff7bc16ba in start_thread (arg=0x7ffff5f4c700) at pthread_create.c:333
+#7  0x00007ffff735f41d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+Quit
++q
